@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day -2 Interview Questions</title>
+    <style>
+        h4 {
+            margin-bottom: 0;
+        }
+        p {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h4>What is asynchronous programming?</h4>
+    <p>Asynchronous programming is a programming technique that allows JavaScript to start an operation without waiting for it to finish. While the browser or runtime handles the asynchronous task, JavaScript continues executing the remaining code. When the operation completes, its callback or promise is scheduled to run.</p>
+    
+    <h4>Why do we need asynchronous programming?</h4>
+    <p>We use asynchronous programming to prevent blocking the main thread, keeping the application responsive while waiting for slow operations like API requests, timers, or file operations.</p>
+
+    <h4>Does JavaScript itself create timers?</h4>
+    <p>No JS donot create timers itself, besides it passes it to the browser</p>
+
+    <h4>Who provides setTimeout()?</h4>
+    <p>setTimeout() is provided by the browser environment (Web APIs), not by the JavaScript language itself. <br />This distinction matters because in Node.js, setTimeout() is provided by the Node.js runtime instead of the browser.</p>
+
+    <h4>What is Lexical Scope?</h4>
+    <p>Lexical scope is a concept of accessibility of a variable in a function based on its location in a code. For example, a varible is defined in a parent function then it is accessible and called by its child function. But if a varibale is in the child function then it is not directly accessible by its parent function.</p>
+
+    <h4>What is a Closure?</h4>
+    <p>A closure is a function that allows a variable to be accessed from the outer function even after the outer function has finished its execution.</p>
+
+    <h4>Why do Closures remember variables even after the outer function has finished executing?</h4>
+    <p>This is because of the Lexical scope concept. That the inner function has access to the variables of its parent and after the parent function is executed the closure still remembers the values of its parent.</p>
+
+    <h4>What is the Call Stack?</h4>
+    <p>A Call Stack is a data structure that keeps track of the function calls in a program. It follows the LIFO (Last In, First Out) principle. means that the last function called is the first one to be completed and removed from the stack.</p>
+    
+    <h4>Why is the Call Stack called a Stack? Which data structure does it use?</h4>
+    <p>Because here inside Call Stack the functions are stacked on the top of each other and it follows LIFO principle.</p>
+
+    <h4>What is the Callback Queue (Macrotask Queue)?</h4>
+    <p>A Callback Queue is a queue that holds the callback functions of Asynchronous operations till the Call Stack is empty.</p>
+
+    <h4>What is the Microtask Queue?</h4>
+    <p>A Microtask Queue is also a queue that also holds the callback functions of Asynchronous operations but it has a higher priority than the Callback (Macrotask) Queue.</p>
+
+    <h4>What is the Event Loop?</h4>
+    <p>An Event loop is a mechanism that continously check for the Call Stack, Macrotask and Microtask Queue and moves the callback functions from the queue to the Call Stack when it is empty. And the Priority should be given to the Microtask Queue first and then the Macrotask Queue.</p>
+
+    <h4>When does the Event Loop move a callback to the Call Stack?</h4>
+    <p>The Event Loop moves a callback from the queue to the Call Stack when the Call Stack is empty.</p>
+
+    <h4>Which has higher priority: Microtask Queue or Macrotask Queue?</h4>
+    <p>The Microtask Queue has higher priority than the Macrotask Queue.</p>
+
+    <h4>Name three examples of Microtasks.</h4>
+    <p>1. Promises<br />
+    2. Fetch API<br />
+    3.</p> 
+
+    <h4>Name three examples of Macrotasks.</h4>
+    <p>1. setTimeout()<br />
+    2. setInterval()<br />
+    3.</p>
+
+    <h4>What is a Promise?</h4>
+    <p>A Promise is an object that represents an asynchronous operation that evetually gives a result that can be either fullfilled (resolved) or rejected.</p>
+
+    <h4>What are the three states of a Promise?</h4>
+    <p>1. Pending state<br />
+    2. Fulfilled state<br />
+    3. Rejected state</p>
+
+    <h4>What is the purpose of resolve()?</h4>
+    <p>When the promise is fullfilled the the resolve() method is called to return the result of the asynchronous operation.</p>
+
+    <h4>What is the purpose of reject()?</h4>
+    <p>When the promise is rejected the reject() method is called to return the error of the asynchronous operation.</p>
+
+    <h4>What is the difference between .then() and .catch()?</h4>
+    <p>When the promise is fullfilled, the .then() methode is called to show the result. And when the promise is rejected, the .catch() method is called to show the error.</p>
+
+    <h4>Why do we use Promises instead of callbacks?</h4>
+    <p>Because it is more readblle and easier to handle then the callbacks and its format / syntax is also more understandable.</p>
+
+    <h4>Does fetch() return data or a Promise?</h4>
+    <p>Fetch is a method that returns a Promise whether it is fullfilled or rejected later.</p>
+
+    <h4>Where are resolve() and reject() in fetch()?</h4>
+    <p>Its actually inside the fetch() method but not directly visible or shown in the code. It is handled by the browser and the result is returned in the form of a Promise.</p>
+
+    <h4>What is async?</h4>
+    <p>Async is a keyword that makes a function always return a Promise.</p>
+
+    <h4>What is await?</h4>
+    <p>Await is a keyword that waits until the Promise which is in pending state, settled and then returns the result of the Promise that may be successful or rejected.</p>
+
+    <h4>Can await be used without async?</h4>
+    <p>No, await can only be used inside an async function.</p>
+
+    <h4>Why do we use try...catch with async/await?</h4>
+    <p>We use try - catch to handle the errors that may occurs. Like if the Promise is resolved the try block runs and if it is rejected, then the catch block runs to handle the error.</p>
+
+    <h4>What is the difference between .then() and await?</h4>
+    <p>then is a method that is executed when the Promise is fullfilled and it can be used outside the async function. While await is totally different. It is a keyword that waits untill the Promise is settled and it can only be used inside the async function.</p>
+
+    <h4>Explain the complete flow of JavaScript execution from Call Stack, Web APIs, Microtask Queue, Macrotask Queue, and Event Loop using Promise and setTimeout in one example.</h4>
+    <p>
+        Okay so first of all, the JS engine starts executing the code line by line and when it encounters a Promise or setTimeout() method, it passes it to the Web APIs. And then the JS engine continues executing the remaining code. When the Promise is settled or the setTimeout() time is completed, their callback functions are moved to their respective queues. The Event Loop continously checks for the Call Stack and when it is empty, it moves the callback functions from the Microtask Queue first and then from the Macrotask Queue to the Call Stack for execution.
+    </p>
+
+</body>
+</html>
