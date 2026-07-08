@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Day - 2</title>
+</head>
+<script>
+    "use strict"
+
+    // Lexical Scope Understanding
+    console.log('// Lexical Scope Understanding');
+
+    const globalVariable = "I am Globally accessible."
+
+    function outerFunction() {
+        const outerVariable = "I am outer Variable";
+        console.log(globalVariable);
+        console.log(outerVariable);
+
+        function innerFunction() {
+            let innerVariable = "I am inner Variable";
+            console.log(globalVariable);
+            console.log(outerVariable);
+            console.log(innerVariable);
+            return innerVariable;
+        }
+        innerFunction();
+        const newInnerVariable = innerFunction();
+        console.log(newInnerVariable)
+    }
+    outerFunction();
+
+</script>
+<body>
+    
+</body>
+</html>
