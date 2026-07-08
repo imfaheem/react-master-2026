@@ -43,22 +43,98 @@
       return inner;
     }
 
-      const myFunction = outer();
+	const myFunction = outer();
 
-      myFunction();
+	myFunction();
 
-      function person(name) {
-        return function () {
-          console.log("Welcome " + name);
-        };
-      }
+	function person(name) {
+	return function () {
+		console.log("Welcome " + name);
+	};
+	}
 
-      const p1 = person("Faheem");
-      const p2 = person("Ali");
+	const p1 = person("Faheem");
+	const p2 = person("Ali");
 
-      p1();
-      p2();
-    </script>
-  </head>
-  <body></body>
+	p1();
+	p2();
+
+	console.log("Start");
+
+	for (let i = 0; i < 2; i++) {
+		console.log(i);
+	}
+
+	console.log("End");
+
+	console.log("Start Again")
+
+	setTimeout(()=> {
+		for (let i = 0; i < 10; i++) {
+			console.log(i);
+		}
+	}, 0);
+
+	console.log("End Again")
+
+	//Promise Understanding
+	console.log('//Promise Understanding');
+
+	const promise = new Promise((resolve, reject)=> {
+		let success = true;
+
+		if(success) {
+			resolve("Promise Completed Successfully");
+		} else {
+			reject("Promise Failed");
+		}
+	});
+	
+	promise.then(result => {
+		console.log(result);
+	}).catch(error => {
+		console.log(error);
+	});
+
+	const newPromise = new Promise((x,y)=> {
+		let bol = false;
+		bol ? x("Success") : y("Failure");
+	});
+	newPromise
+	.then(res => console.log(res))
+	.catch(err => console.log(err));
+
+
+	const getApi = fetch('https://jsonplaceholder.typicode.com/todos/1');
+	getApi.then(response => response.json())
+	.then(data => console.log(data))
+	.catch(error => console.log(error));
+
+	async function getData() {
+		try {
+			const res = await fetch('https://jsonplaceholder.typicode.com/todos/2');
+			const data = await res.json();
+			console.log(data);
+		} catch (error) {
+			console.log("Error Occured");
+		}
+	}
+	getData();
+
+	async function demo() {
+		console.log("A");
+
+		await Promise.resolve();
+
+		console.log("B");
+	}
+
+	demo();
+
+	console.log("C");
+
+</script>
+<body>
+    
+</body>
 </html>
