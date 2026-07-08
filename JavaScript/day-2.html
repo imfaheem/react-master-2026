@@ -31,8 +31,34 @@
     }
     outerFunction();
 
-</script>
-<body>
-    
-</body>
+    console.log("// Closures");
+
+    function outer() {
+      let name = "Faheem";
+
+      function inner() {
+        console.log(name);
+      }
+
+      return inner;
+    }
+
+      const myFunction = outer();
+
+      myFunction();
+
+      function person(name) {
+        return function () {
+          console.log("Welcome " + name);
+        };
+      }
+
+      const p1 = person("Faheem");
+      const p2 = person("Ali");
+
+      p1();
+      p2();
+    </script>
+  </head>
+  <body></body>
 </html>
