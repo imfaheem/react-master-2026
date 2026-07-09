@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day - 3 Interview Questions</title>
+</head>
+<body>
+    
+    Explain in your own words why objects are used instead of many separate variables?
+    Objects are used because they keep related data together in one place. This makes the code simpler, cleaner, and easier to read, update, and maintain than using many separate variables.
+
+    What is a method?
+    A method is a function that is stored as a property of an object.
+
+    What does this refer to?
+    this refers to the object that calls the function. Its value depends on how the function is invoked, not where it is defined.
+
+    Why doesn't this work in arrow functions as object methods?
+    Because arrow functions do not have its own this. they inherit it from the surrounding lexical scope.
+
+    What is a prototype?
+    A prototype is an object that every JavaScript object is internally linked to. If a property or method is not found on the object itself, JavaScript looks for it in its prototype.
+
+    Why are prototypes used?
+    Prototypes are used to share common methods and properties among multiple objects. This saves memory because only one copy of the method exists in the prototype instead of every object having its own copy.
+        
+    Where does JavaScript look if a property isn't found on an object?
+    It looks to the prototype object if a propery is not found on an object. JS continues searching up the prototype chain until it reaches null.
+
+    What is the Prototype Chain?
+    Prototype chain is a mechanism JS used in which each prototype is linked to another prototype for the purpose of searching, or performing any other function. Every object is linked to a prototype which is further linked to another prototype unless it reaches to null.
+
+    What is Object.prototype?
+    The Objects we create are linked with the Object.prototype to perform multiple functionalities.
+
+    Why can every object use methods like toString()?
+    Because in the object.prototype there is already a built-in methods associated with it. toString is one of it.
+
+    What is a JavaScript module?
+    Module is simply a javascript file use to split multiple files instead of writing everything in a single file.
+
+    Difference between named export and default export?
+    Name export are simply use to export variables, functions etc but if these are imported then only by using a curly brackets around them. There aree multiple name export in a single file. 
+    Whereas, default export is used only one time in a single file and is imported with out any curly brackets.
+
+    Why do we use modules?
+    We use modules to avoid a huge single file with 1000s of lines of code. Plus to make the JS code cleaner, reusable and easier to maintain.
+
+    Why do we use try...catch?
+    try-catch is an error handling syntax in JS in which we write the code in the try block and if any error occurs then the catch block will run and handle the error but the program will run till the end and not break after the error occurs.
+    
+    What is throw?
+    throw is used to manually generate an error in JavaScript. It allows us to create custom errors when a specific condition occurs.
+    
+    When does finally execute?
+    finally block will always execute in the error handling machanism used in JS. It will always execute whether an error occurs or not.
+
+    What is Optional Chaining
+    Optional Chaining (?.) is a JavaScript operator used to safely access object properties or methods. If a property is null or undefined, it returns undefined instead of throwing an error.
+
+    What is Nullish Coalescing
+    Nullish Coalescing(??) is used to provide a default value only if the left side is null or undefined.
+
+    Difference between || and ??
+    || always returns the right-hand value if the left-hand value is falsy(0, "", null, undefined). While ?? always returns a default right-hand value only when the left-hand value is null or undefined.
+
+</body>
+</html>

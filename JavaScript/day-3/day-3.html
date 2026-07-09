@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Day-3</title>
+</head>
+<script>
+    // Objects Understanding
+
+    console.log("// Objects Understanding")
+    const person = {
+        name: 'Faheem',
+        age: 35,
+        city: 'Peshawar',
+        cast: 'Sheikh'
+    }
+    person['DOB'] = '15th October, 1990';
+    console.log(person);
+
+    // person is Object
+    // name, age, city etc... are the Property name or key
+    // Faheem, 35, Peshawar etc are the values.
+
+    // Object Keys
+    console.log("// Object Keys");
+    const keys = Object.keys(person);
+    console.log(keys);
+
+    // Object Values
+    console.log("// Object Values");
+    const values = Object.values(person);
+    console.log(values);
+
+    // Object Entries
+    console.log("// Object Entries");
+    const entries = Object.entries(person);
+    console.log(entries);
+
+    // Another Object
+    console.log("// Another Object");
+    const user = new Object();
+    user.id = 1;
+    user.name = 'M. Faheem Sikandar';
+    user.age = 36;
+    user.designation = 'Seenior Frontend Developer';
+    user.city = "Lahore";
+    user['country'] = 'Pakistan';
+
+    console.log(user);
+
+    const name = user.name;
+    console.log(name);
+
+    const id = user['id'];
+    console.log(id)
+
+    const key = 'id';
+    console.log(user[key]) // 1
+    console.log(user.key) // undefined
+
+    // Similarly,
+
+    const age = "age";
+    console.log(person.age); // 35
+    console.log(person[age]); // 35
+
+    // But now, If:
+    const value = "age";
+    console.log(person[value]); // 35 .i.e. Looks for the property (value) whose name is stored in value ("age")
+    console.log(person.value); // undefined .i.e. Looks for a property named "key"
+
+    //Loop in Objects
+    console.log("// Loop in Objects");
+    for(let key in user){
+        console.log(key);
+    }
+    // OR
+    for(let key in user){
+        console.log(user[key])
+    }
+    // Similarly,
+    for(let key in user){
+        console.log(key +':', user[key])
+    }
+
+    const company = {
+        name: "Arbisoft",
+        employees: [
+            {
+                id: 1,
+                name: "Ali"
+            },
+            {
+                id: 2,
+                name: "Faheem"
+            }
+        ]
+    };
+
+    console.log(company.employees[1].name);
+
+    // Assignment
+    console.log('// Assignment');
+    const product = {
+        id: 101,
+        name: "Shampoo",
+        price: 120,
+        category: "hair",
+        stock: 'available',
+        colors: ['red', 'blue', 'green'],
+        seller: {
+            name: "Neelam",
+            city: "Islamabad"
+        }
+    };
+    console.log(product);
+
+    // Print the product name.
+    console.log(product.name);
+
+    // Print the seller's city.
+    console.log(product.seller.city);
+
+    // Add a discount property.
+    product.discount = 20;
+    console.log(product);
+
+    // Update the price.
+    product.price = product.price-product.discount;
+    console.log(product)
+    
+    // Delete the stock property.
+    delete product.stock
+    console.log(product);
+
+    // Print all keys.
+    console.log(Object.keys(product));
+
+    // Print all values.
+    console.log(Object.values(product));
+
+    // Loop through every property and print its key and value.
+    for(let key in product) {
+        console.log(key + ":", product[key])
+    }
+
+    // Print the second color.
+    console.log(product.colors[1]);
+    
+</script>
+<body>
+    
+</body>
+</html>
