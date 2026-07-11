@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day - 4 JavaScript Technical</title>
+    <script>
+        const array = [1, 2, 3, 4, 5];
+
+        console.log(Array.isArray(array));
+
+        console.log(array[array.length - 1]);
+
+        const numbers = [1, 4, 5, 6, 7, 3, 2, 0, 9, 8];
+        // Sort function
+        console.log("// Sort Function")
+        console.log(numbers.sort());
+        
+        // Reverse function
+        console.log("// Reverse Function")
+        console.log(numbers.reverse())
+        
+        numbers.push("Faheem");
+        // Includes function
+        console.log("// Includes Function")
+        console.log(numbers.includes("Faheem"))
+        console.log(numbers);
+
+        // Some function
+        console.log("// Some Function")
+        console.log(numbers.some(even => even %2 === 0))
+        
+        // Every function
+        console.log("// Every Function")
+        console.log(numbers.every(even => even %2 === 0))
+        
+        // Concat function
+        console.log("// Concat Function")
+        const concatArray = array.concat(numbers);
+        console.log(concatArray);
+        console.log(concatArray.concat({name: 'Faheem', age: 35}, ['red', 'blue', 'green']))
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day - 4 Mini Projects</title>
+</head>
+<script>
+
+    //Create an array of five fruits.
+    const fruits = ["Apple", "Banana", "Mango", "Orange", "Grapes"];
+    
+    //Print all fruits.
+    console.log(fruits);
+    
+    //Print the first and last element.
+    console.log(fruits[0]);
+    console.log(fruits[fruits.length-1]);
+
+    //Add one fruit at the end.
+    fruits.push("Peach");
+    console.log(fruits);
+
+    //Remove the last fruit.
+    fruits.pop();
+    console.log(fruits);
+
+    //Add one fruit at the beginning.
+    fruits.unshift("Peach");
+    console.log(fruits);
+
+    //Remove the first fruit.
+    fruits.shift();
+    console.log(fruits);
+
+    //Replace one fruit using splice().
+    fruits.splice(1,1);
+    console.log(fruits);
+
+    //Copy the first three fruits using slice().
+    const newFruits = fruits.slice(0, 3);
+    console.log(newFruits);
+
+    //Convert all fruit names to uppercase using map().
+    const fruitName = fruits.map(names => names.toUpperCase());
+    console.log(fruitName);
+
+    const numbers = [5,8,10,17,22,30];
+    //Filter all even numbers.
+    numbers.filter(even => even %2 === 0).map(result => console.log(result));
+
+    //Find the first number greater than 20.
+    const result = numbers.find(num => num > 20)
+    console.log(result);
+
+    //Calculate the sum using reduce().
+    const marks = [70,90,85,100];
+    const sum = marks.reduce((acc, val)=> {
+        return acc+val;
+    })
+    console.log(sum);
+
+    //Calculate total price.
+    const cart = [
+        {name:"Mouse",price:500},
+        {name:"Keyboard",price:1500},
+        {name:"Monitor",price:18000}
+    ];
+
+    const price = cart.map(({price}) => {
+        return price;
+    })
+    const totalPrice = price.reduce((acc, val) => {
+        return acc + val;
+    })
+    console.log(totalPrice);
+
+    // Return only students who passed.
+    const students = [
+        {name:"Ali",marks:80},
+        {name:"Ahmed",marks:40},
+        {name:"Sara",marks:95},
+        {name:"John",marks:30}
+    ];
+
+    const passed = students.filter(({marks}) => marks > 50).map(std => std);
+    console.log(passed);
+
+    // Return only student names.
+    const stdName = students.map(names => names.name);
+    console.log(stdName)
+
+</script>
+<body>
+    
+</body>
+</html>
