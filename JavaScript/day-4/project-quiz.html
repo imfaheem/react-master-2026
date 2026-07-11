@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day -4 Projects</title>
+</head>
+<script>
+    const employees = [
+        {id:1,name:"Ali",salary:40000},
+        {id:2,name:"Ahmed",salary:55000},
+        {id:3,name:"Sara",salary:80000},
+        {id:4,name:"John",salary:30000},
+        {id:5,name:"Mary",salary:70000}
+    ];
+
+    // Return employees having salary greater than 50000.
+    const greaterEmployees = employees.filter(({salary}) => salary > 50000)
+    console.log(greaterEmployees);
+
+    // Return only employee names.
+    console.log(employees.map(names => names.name));
+
+    // Increase everyone's salary by 10%.
+    const updateSalary = employees.map(emp => ({
+        ...emp,
+        salary: emp.salary * 1.10,
+    }))
+    console.log(updateSalary)
+
+    // Find employee with id = 4.
+    const employee = employees.find(user => user.id === 4)
+    console.log(employee)
+
+    // Calculate total salary.
+    const totalSalary = employees.map(total => total.salary);
+    const salarySum = totalSalary.reduce((acc, val)=> {
+        return acc + val
+    })
+    console.log(salarySum);
+
+    const employeesList = [
+        {id:1,name:"Ali",department:"IT",salary:50000},
+        {id:2,name:"Ahmed",department:"HR",salary:45000},
+        {id:3,name:"Sara",department:"IT",salary:80000},
+        {id:4,name:"John",department:"Finance",salary:70000},
+        {id:5,name:"Mary",department:"HR",salary:55000}
+    ];
+    // Print all employee names.
+    const empNames = employeesList.map(name => name.name);
+    console.log(empNames);
+
+    // Return only IT employees.
+    const empIT = employeesList.filter(it => it.department === 'IT');
+    console.log(empIT);
+
+    // Find employee named John.
+    const empName = employeesList.find(item => item.name === 'John');
+    console.log(empName);
+
+    // Calculate total company salary.
+    const salary = employeesList.map(({salary})=>salary);
+    const companySalary = salary.reduce((acc, val) => acc + val);
+    console.log(companySalary);
+
+    // Create a new array with salaries increased by 20%.
+    const increasedSalary = employeesList.map(emp => ({
+        ...emp,
+        salary: emp.salary*1.20
+    }))
+    console.log(increasedSalary);
+
+    // Print employees earning above 60,000.
+    const aboveSalary = employeesList.filter(salary => salary.salary > 60000)
+    console.log(aboveSalary)
+
+    // Print only departments. ["IT","HR","IT","Finance","HR"]
+    const dept = employeesList.map(element => element.department);
+    console.log(dept)
+
+    // Add a new employee without modifying the original array (React way).
+    const myEmployee = {id:6, name:"Faheem", department:"IT", salary:550000}
+    const newEmpList = [...employeesList, myEmployee];
+    console.log(newEmpList)
+
+    // Remove employee with id = 2 without modifying the original array.
+    const removeEmp = employeesList.filter(key => key.id !== 2)
+    console.log(removeEmp);
+    
+    // Replace John's salary with 90,000 without modifying the original array.
+    const john = employeesList.map(user => {
+        if(user.name === "John") {
+            return {
+                ...user,
+                salary: 90000
+            }
+        }
+        return user;
+    })
+    console.log(john);
+
+</script>
+<body>
+    
+</body>
+</html>

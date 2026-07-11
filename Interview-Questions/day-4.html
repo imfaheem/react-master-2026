@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day - 4 Interview Questions</title>
+    <style>
+        h4 {
+            margin-bottom: 0;
+        }
+        p {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Part 1 — Theory Interview Questions (25 Questions)</h1>
+
+    <h4>Q1. What is an array in JavaScript?</h4>
+    <p>An array is a non-primitive data type that is used to store multiple values in a single variable. It is a type of object that contains indexes, which are integer values starting from 0 as properties or keys, and each key has a value.</p>
+
+    <h4>Q2. Why do arrays start with index 0 instead of 1?</h4>
+    <p>Because in JavaScript, the first element of an array is stored at index 0, which is the first position in the array's memory.</p>
+
+    <h4>Q3. How do you check whether a variable is an array?</h4>
+    <p>By using the Array.isArray(array_name) method. If the result is true, it means the variable is an array.</p>
+
+    <h4>Q4. What is the difference between an array and an object?</h4>
+    <p>An array and an object are both non-primitive data types in JavaScript. The main difference is that an array stores multiple values in a single variable, where each value is stored against an index key starting from 0. An object stores multiple values in key-value pairs, where the key is a string or symbol and the value can be of any data type.</p>
+
+    <h4>Q5. How do you access the last element of an array?</h4>
+    <p>By using an expression such as array[array.length - 1].</p>
+
+    <h4>Q6. What does the length property return?</h4>
+    <p>It returns the number of elements in an array.</p>
+
+    <h4>Q7. Is an array a primitive data type?</h4>
+    <p>No, an array is a non-primitive data type.</p>
+
+    <h4>Q8. What is the difference between push() and pop()?</h4>
+    <p>push() is used to add an element at the end of an array, and pop() is used to remove the last element from the array.</p>
+
+    <h4>Q9. What is the difference between shift() and unshift()?</h4>
+    <p>unshift() is used to add an element at the first index (0) of the array, and shift() is used to remove the first element from the array.</p>
+
+    <h4>Q10. Name three array methods that modify the original array.</h4>
+    <p>1. push()<br />2. pop()<br />3. shift()</p>
+
+    <h4>Q11. What is the difference between slice() and splice()?</h4>
+    <p>slice() is used to extract a portion of an array and returns a new array without modifying the original one. splice() is used to add or remove elements from an array and modifies the original array.</p>
+
+    <h4>Q12. Does map() modify the original array?</h4>
+    <p>No, map() does not modify the original array. It returns a new array after applying a function to each element of the original array.</p>
+
+    <h4>Q13. When should you use map() instead of forEach()?</h4>
+    <p>You should use map() when you want to return a new array. forEach() is used when you want to perform an action on each element but it does not return a new array.</p>
+
+    <h4>Q14. What is the difference between filter() and find()?</h4>
+    <p>filter() returns a new array with all elements that satisfy the condition. find() returns only the first element that satisfies the condition, or undefined if none is found.</p>
+
+    <h4>Q15. What does reduce() do?</h4>
+    <p>reduce() is used to reduce an array to a single value. It takes a callback function and applies it to each element of the array.</p>
+
+    <h4>Q16. Explain the accumulator in reduce().</h4>
+    <p>The accumulator is the first argument of the callback function used in reduce().</p>
+
+    <h4>Q17. What happens if find() doesn't find any matching element?</h4>
+    <p>It returns undefined.</p>
+
+    <h4>Q18. What is a callback function?</h4>
+    <p>A callback function is a function that is passed as an argument to another function and is executed later.</p>
+
+    <h4>Q19. What is method chaining? Give one example.</h4>
+    <p>Method chaining is a technique where one method is called after another on the returned value of the previous method. For example, const evenNumbers = numbers.filter(even => even % 2 === 0).map(newEven => newEven);</p>
+
+    <h4>Q20. Why is map() heavily used in React?</h4>
+    <p>map() is heavily used in React because it is commonly used to render lists of items dynamically in JSX and returns a new array after transformation.</p>
+
+    <h4>Q21. Why should we avoid push() on React state?</h4>
+    <p>push() mutates the original array. In React, we should avoid directly mutating state because it can cause unexpected behavior. Instead, we should use non-mutating methods like concat() or the spread operator.</p>
+
+    <h4>Q22. Explain mutable and immutable array methods with examples.</h4>
+    <p>Mutable array methods change the original array, such as push() and pop(). Immutable array methods return a new array without changing the original one, such as map() and concat().</p>
+
+    <h4>Q23. Explain how map() works internally.</h4>
+    <p>map() takes an array and a callback function, applies the callback to each element, collects the results in a new array, and returns that new array when finished.</p>
+
+    <h4>Q24. Why is the key prop important when rendering lists in React?</h4>
+    <p>The key prop helps React identify each item in a list so it can update and re-render the DOM efficiently.</p>
+
+    <h4>Q25. Name all array methods you learned today and classify them into:</h4>
+    <p>Mutating: pop, push, splice, shift, unshift, sort, reverse, forEach<br />Non-mutating: slice, reduce, map, filter, find, includes, concat, some, every</p>
+
+</body>
+</html>

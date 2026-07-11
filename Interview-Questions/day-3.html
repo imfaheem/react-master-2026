@@ -4,66 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Day - 3 Interview Questions</title>
+    <style>
+        h4 {
+            margin-bottom: 0;
+        }
+        p {
+            margin-top: 0;
+        }
+    </style>
 </head>
 <body>
-    
-    Explain in your own words why objects are used instead of many separate variables?
-    Objects are used because they keep related data together in one place. This makes the code simpler, cleaner, and easier to read, update, and maintain than using many separate variables.
+    <h4>Explain in your own words why objects are used instead of many separate variables?</h4>
+    <p>Objects are used because they keep related data together in one place. This makes the code simpler, cleaner, and easier to read, update, and maintain than using many separate variables.</p>
 
-    What is a method?
-    A method is a function that is stored as a property of an object.
+    <h4>What is a method?</h4>
+    <p>A method is a function that is stored as a property of an object.</p>
 
-    What does this refer to?
-    this refers to the object that calls the function. Its value depends on how the function is invoked, not where it is defined.
+    <h4>What does this refer to?</h4>
+    <p>This refers to the object that calls the function. Its value depends on how the function is invoked, not where it is defined.</p>
 
-    Why doesn't this work in arrow functions as object methods?
-    Because arrow functions do not have its own this. they inherit it from the surrounding lexical scope.
+    <h4>Why doesn't this work in arrow functions as object methods?</h4>
+    <p>Because arrow functions do not have their own this. They inherit it from the surrounding lexical scope.</p>
 
-    What is a prototype?
-    A prototype is an object that every JavaScript object is internally linked to. If a property or method is not found on the object itself, JavaScript looks for it in its prototype.
+    <h4>What is a prototype?</h4>
+    <p>A prototype is an object that every JavaScript object is internally linked to. If a property or method is not found on the object itself, JavaScript looks for it in its prototype.</p>
 
-    Why are prototypes used?
-    Prototypes are used to share common methods and properties among multiple objects. This saves memory because only one copy of the method exists in the prototype instead of every object having its own copy.
-        
-    Where does JavaScript look if a property isn't found on an object?
-    It looks to the prototype object if a propery is not found on an object. JS continues searching up the prototype chain until it reaches null.
+    <h4>Why are prototypes used?</h4>
+    <p>Prototypes are used to share common methods and properties among multiple objects. This saves memory because only one copy of the method exists in the prototype instead of every object having its own copy.</p>
 
-    What is the Prototype Chain?
-    Prototype chain is a mechanism JS used in which each prototype is linked to another prototype for the purpose of searching, or performing any other function. Every object is linked to a prototype which is further linked to another prototype unless it reaches to null.
+    <h4>Where does JavaScript look if a property isn't found on an object?</h4>
+    <p>It looks in the prototype object if a property is not found on an object. JavaScript continues searching up the prototype chain until it reaches null.</p>
 
-    What is Object.prototype?
-    The Objects we create are linked with the Object.prototype to perform multiple functionalities.
+    <h4>What is the Prototype Chain?</h4>
+    <p>The prototype chain is a mechanism JavaScript uses in which each prototype is linked to another prototype for the purpose of searching or performing other functions. Every object is linked to a prototype, which is further linked to another prototype unless it reaches null.</p>
 
-    Why can every object use methods like toString()?
-    Because in the object.prototype there is already a built-in methods associated with it. toString is one of it.
+    <h4>What is Object.prototype?</h4>
+    <p>The objects we create are linked with Object.prototype to perform multiple functionalities.</p>
 
-    What is a JavaScript module?
-    Module is simply a javascript file use to split multiple files instead of writing everything in a single file.
+    <h4>Why can every object use methods like toString()?</h4>
+    <p>Because in Object.prototype there are already built-in methods associated with it. toString is one of them.</p>
 
-    Difference between named export and default export?
-    Name export are simply use to export variables, functions etc but if these are imported then only by using a curly brackets around them. There aree multiple name export in a single file. 
-    Whereas, default export is used only one time in a single file and is imported with out any curly brackets.
+    <h4>What is a JavaScript module?</h4>
+    <p>A module is simply a JavaScript file used to split code into multiple files instead of writing everything in a single file.</p>
 
-    Why do we use modules?
-    We use modules to avoid a huge single file with 1000s of lines of code. Plus to make the JS code cleaner, reusable and easier to maintain.
+    <h4>What is the difference between named export and default export?</h4>
+    <p>Named exports are used to export variables and functions, and they are imported using curly brackets. There can be multiple named exports in a single file. Default export is used only once per file and is imported without curly brackets.</p>
 
-    Why do we use try...catch?
-    try-catch is an error handling syntax in JS in which we write the code in the try block and if any error occurs then the catch block will run and handle the error but the program will run till the end and not break after the error occurs.
-    
-    What is throw?
-    throw is used to manually generate an error in JavaScript. It allows us to create custom errors when a specific condition occurs.
-    
-    When does finally execute?
-    finally block will always execute in the error handling machanism used in JS. It will always execute whether an error occurs or not.
+    <h4>Why do we use modules?</h4>
+    <p>We use modules to avoid a huge single file with thousands of lines of code. They also make JavaScript code cleaner, reusable, and easier to maintain.</p>
 
-    What is Optional Chaining
-    Optional Chaining (?.) is a JavaScript operator used to safely access object properties or methods. If a property is null or undefined, it returns undefined instead of throwing an error.
+    <h4>Why do we use try...catch?</h4>
+    <p>Try-catch is an error-handling syntax in JavaScript in which we write code in the try block, and if any error occurs, the catch block runs and handles the error without breaking the program completely.</p>
 
-    What is Nullish Coalescing
-    Nullish Coalescing(??) is used to provide a default value only if the left side is null or undefined.
+    <h4>What is throw?</h4>
+    <p>Throw is used to manually generate an error in JavaScript. It allows us to create custom errors when a specific condition occurs.</p>
 
-    Difference between || and ??
-    || always returns the right-hand value if the left-hand value is falsy(0, "", null, undefined). While ?? always returns a default right-hand value only when the left-hand value is null or undefined.
+    <h4>When does finally execute?</h4>
+    <p>The finally block always executes in JavaScript error handling. It runs whether an error occurs or not.</p>
 
+    <h4>What is Optional Chaining?</h4>
+    <p>Optional Chaining (?.) is a JavaScript operator used to safely access object properties or methods. If a property is null or undefined, it returns undefined instead of throwing an error.</p>
+
+    <h4>What is Nullish Coalescing?</h4>
+    <p>Nullish Coalescing (??) is used to provide a default value only if the left side is null or undefined.</p>
+
+    <h4>What is the difference between || and ??</h4>
+    <p>|| returns the right-hand value if the left-hand value is falsy (0, "", null, undefined). Meanwhile, ?? returns a default right-hand value only when the left-hand value is null or undefined.</p>
 </body>
 </html>
