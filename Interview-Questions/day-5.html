@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day - 5 Interview Questions</title>
+    <style>
+        h4 {
+            margin-bottom: 0;
+        }
+
+        p {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <h4>Difference between var, let, and const?</h4>
+    <p>var, let const all are JS keywords used to declare variables. var is function-scoped that can be re-declared as well as re-assigned. It is hoisted and initialized with undefined. let and const are block-scoped. let can be re-assigned but cannot be re-declared. Where as, const cannot re-declared or re-assigned. In case of objects, a const variable cannot be re-assigned but its properties can be modified. Both let and const are hoisted, but remain in the Temporal Dead Zone (TDZ) until they are initialized.</p>
+
+    <h4>What is the Temporal Dead Zone (TDZ)?</h4>
+    <p>A TDZ is the period between when a let or const variable is created, and when it is initialized. During this period, if we access these (let or const) variables, JavaScript throws a ReferenceError because the variable exists but has not been initialized yet.</p>
+
+    <h4>Is const immutable?</h4>
+    <p>No, const does not make object or array immutable. It prevents the variable from being re-assign, but it allows the properties of an object or the elements of an array to be modified because const locks or hold the reference, not the contents.</p>
+
+    <h4>What is Destructuring?</h4>
+    <p>Destructuring is a feature in JS that extract values from objects and array into separate variables.</p>
+
+    <h4>What is Template Literals?</h4>
+    <p>Template Literals are string enclosed in backticks (``), instead of a single or double quotes. It support string interpolation, multi-lines strings and embedded expressions.</p>
+
+    <h4>What is String Interpolation?</h4>
+    <p>String interpolation is the process of embedding variables or JavaScript expressions inside a template literal using ${} syntax.</p>
+
+    <h4>What is the Spread Operator or What does the spread operator do?</h4>
+    <p>Spread operator (...) expands the array or object into individual elements or properties. It creates a new copy of an array or an object. It creates a shallow copy, which means that only the first level is copied while the nested arrays or objects are copied by its reference.</p>
+
+    <h4>What is Rest Operator?</h4>
+    <p>Rest Operator (...) is used to collect multiple values into a single variable. The type of variable depends on where the Rest (...) syntax is used. In function parameters, it collects multiple arguments of a function into a single Array. In array destructuring, it collects the remaining elements into a new array. While in object destructuring, it collects the remaining properties into a new object.</p>
+
+    <h4>Can Rest and Spread use the same syntax?</h4>
+    <p>Yes. Both Rest and Spread both use the same syntax (...). However, their behaviour depends on where they are used.</p>
+
+    <h4>Different between Rest and Spread?</h4>
+    <p>Rest is used to collect multiple values into a single variable. While Spread is used to expands an array or an object into individual elements or properties.</p>
+</body>
+</html>

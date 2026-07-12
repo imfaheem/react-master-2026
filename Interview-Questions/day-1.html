@@ -28,25 +28,34 @@ An Execution Context is the environment or workspace where JavaScript executes c
 </p>
 <h4>Why does JavaScript have two phases?</h4>
 <p>Because both phases have its own unique working and behavior. the first one is the memory creation phase, which allocates a memory space for all the variables and the second phase is the execution phase, in which the JS executes the code using JS Engine (V8) along with it's execution context.</p>
+
 <h4>What happens during the Memory Creation Phase?</h4>
 <p>In the Memory Creation Phase, The JS allocates a memory space for all the variables and functions.</p>
+
 <h4>What happens during the Execution Phase?</h4>
 <p>In the Execution Phase, The JS executes the code using JS Engine (V8) along with it's execution context. Assigns values to variables, calls functions and executes them.</p>
+
 <h4>What is undefined?</h4>
 <p>It is happened when a variable is declared but not initialized. Or in other words, it is a varibale is exist, but it's value has not been assigned yet.</p>
+
 <h4>What is the Temporal Dead Zone?</h4>
 <p>The TDZ is a temporary phase or area in which the variable is exists but not initialized yet. It's a temporary waiting period for a variable to be assigned a value or to be initialized.</p>
+
 <h4>What is hoisting?</h4>
 <p>Hoisting is a concept that allows variables and functions to be declared at the top level conceptually. But in reality it is not, and the JS already allocates memory for them during the memory creation phase.</p>
+
 <h4>Why do function declarations work before they appear in the code?</h4>
 <p>Because during the Memory Creation Phase, the JS already stored the function in the memory and it is ready to be executed and to be called before it appears.</p>
+
 <h4>What is the Call Stack?</h4>
 <p>The call stack is a data structure that keeps track of function calls in JavaScript. When a function is called, it is added to the top of the stack, and when it completes, it is removed from the top of the stack. <br /> It follows the LIFO (Last In, First Out) principle.</p>
+
 <h4>What is scope?</h4>
 <p>Scope refers to the accessibility of varibales and functions. The JS looks to be variable whether it is declared or initialized whereever in the workspace or in execution context.
     <br />
 Scope defines where variables and functions are accessible in a program. JavaScript has global scope, function scope, and block scope.
 </p>
+
 <h4>How does JavaScript find a variable?</h4>
 <p>JavaScript looks for a variable in the currect scope first. i.e. Local scope (inside a function). If it is found so that's good. If not, then it looks or search it globally in the whole program or execution context.</p>
     

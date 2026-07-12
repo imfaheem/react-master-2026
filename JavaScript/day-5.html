@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 5 - JS</title>
+</head>
+<script>
+    var user1 = "User name 1";
+    let user2 = "User name 2";
+    const user3 = "User name 3";
+
+    console.log(user1);
+    console.log(user2);
+    console.log(user3);
+
+    if(user1) {
+        var name1 = "Name 1";
+        var user1 = "New User 1";
+        console.log(user1);
+    }
+    console.log(name1);
+
+    if(user2) {
+        let name2 = "Name 2";
+        let user2 = "New User 2";
+        console.log(user2);
+        console.log(name2);
+    }
+    //console.log(name2);
+
+    if(user3) {
+        const name3 = "Name 3";
+        const user3 = "New User 3";
+        console.log(user3);
+        console.log(name3);
+    }
+    //console.log(name3);
+
+    const user = {
+        name: "Faheem",
+        age: 35,
+    }
+    console.log(user);
+    user.name = "Muhammad Faheem Sikandar";
+    user.age = 25;
+    console.log(user);
+
+    // Template Literals
+    console.log(`Template Literals understanding`);
+    const label = "Template Literals";
+    const string = `Strings Interpolation`;
+    console.log(`We can use ${string} inside the ${label}`);
+
+    const a = 10;
+    const b = 20;
+    console.log(`Can also use expressions like: ${a + b}`);
+
+    console.log("Multi-line Strings");
+    const text = "Hello\nWelcome\nReact!";
+    console.log(text);
+    console.log("Same with Backticks Or Template Literals:");
+    console.log(`
+Hello
+    Welcome
+        React!
+    `);
+
+    // Destructuring Understanding
+    const person = {
+        name: "Ahmed",
+        age: 25
+    };
+    const { name, age } = person;
+    console.log(age);
+
+    const fruits = ["Apple", "Mango"];
+    //const [first, second] = fruits;
+    //console.log(second);
+    fruits.push("Orange");
+    const [first, second, third] = fruits;
+    console.log(third);
+    
+    // Spread Operator
+    console.log("// Spread Operator");
+
+    // For a Reference. These are 2 variables referencing same object. 
+    const users1 = {
+        name: "Faheem"
+    };
+    const users2 = users1;
+    console.log(users1);
+    console.log(users2);
+
+    users2.name = "Ali"
+    console.log(users2);
+    console.log(users1);
+
+    //Spread - Shallow Copy
+    const newUser1 = {
+        name: "Faheem",
+        age: 35
+    }
+    const newUser2 = {...newUser1};
+    console.log(newUser1);
+    console.log(newUser2);
+
+    newUser1.name = "Muhammad Faheem";
+    newUser2.age = 25;
+    console.log(newUser1);
+    console.log(newUser2);
+
+    const newUser = {
+        name: "Faheem",
+        address: {
+            city: "Peshawar"
+        }
+    };
+    const anotherUser = {...newUser};
+    console.log(newUser);
+    console.log(anotherUser);
+
+    newUser.name = "Muhammad Faheem Sikandar";
+    console.log(newUser);
+    console.log(anotherUser);
+
+    newUser.address.city = "Islamabad";
+    console.log(newUser);
+    console.log(anotherUser);
+
+    const array1 = [1, 2, 3];   // 1 2 3
+    const array2 = [3, 4, 5];   // 3 4 5
+    const copyArray1 = [...array1]; // 1 2 3
+    const copyArray2 = [...array2]; // 3 4 5
+    array1.push(4);
+    console.log(`Array1: ${array1}`);
+    console.log(`CopyArray1: ${copyArray1}`);
+    
+    array2.unshift(2);
+    console.log(`Array2: ${array2}`);
+    console.log(`CopyArray2: ${copyArray2}`);
+
+    const mergeArray = [...array1, ...array2];
+    console.log(`Merge Array1 and Array2: ${mergeArray}`);
+
+    const mergeCopyArray = [...copyArray1, ...copyArray2];
+    console.log(`Merge CopyArray1 and CopyArray2: ${mergeCopyArray}`);
+
+    //Spread Operator with Objects
+    console.log('// Spread Operator with Objects')
+    const package = {
+        name: "Faheem"
+    }
+    const updatePackage = {
+        ...package,
+        age: 35,
+        city: "Karachi"
+    }
+    console.log(package);
+    console.log(updatePackage);
+    const newPackage = {
+        ...updatePackage,
+        age: 36
+    }
+    console.log(newPackage);
+
+    // Outputs
+    const x = [1, 2];
+    const y = [...x, 3];
+    console.log(y);     // [1, 2, 3]
+
+    const obj = { name: "Ali" };
+    const copy = { 
+        ...obj,
+        age: 20
+    };
+    console.log(copy);      // {name: Ali, age: 20}
+
+    // REST Operator
+    console.log("// REST Operator Understanding.");
+
+    const array = [1, 2, 3];
+    const totalArray = (...array)=> {
+        return array;
+    }
+    const newFullArray = totalArray(array, 4, 5, 6);
+    console.log(newFullArray);
+    const newSpreadArray = totalArray(...array, 4, 5, 6);
+    console.log(newSpreadArray);
+
+    const value = [1,2,3,4,5];
+    //const [value1, value2, value3, value4, value5] = value;
+    //console.log(value1);
+    const [val1, ...values] = value;
+    console.log(val1);
+    console.log(values);
+    // const [...newValues, val4, val5] = value;  Rest element should always be the last in destructing patteern.
+
+    const product = {
+        id: 1,
+        product_name: 'product1',
+        expiry: '1 year',
+    }
+    const { id, product_name, expiry } = product;
+    console.log(product_name);
+
+    const {product_name: secondValue, ...newProduct} = product;
+    console.log(secondValue);
+    console.log(newProduct);
+    const updatedProduct = {
+        ...product,
+        price: 100
+    }
+    console.log(product);
+    console.log(updatedProduct);
+
+    const {expiry: newExpiry, ...newObject} = updatedProduct;
+    console.log(expiry);
+    console.log(newExpiry);
+    console.log(newObject);
+
+    //Default Values Understanding
+    console.log("// Default Parameters");
+    function add(a = 5, b = 10) {
+        console.log(a + b);
+    }
+    add();
+
+    const result = {};
+    console.log(user.profile?.name);    // undefined
+    console.log(0 ?? 100);  // 0
+    console.log(0 || 100);  // 100
+    console.log(false ?? true); // false
+
+    const abc = {
+        names: "Faheem",
+        age: 30
+    };
+    const { names } = abc;
+    console.log(names); // Faheem
+
+    const arr1 = [1, 2];
+    const arr2 = [...arr1, 3];
+    console.log(arr2);  // [1 2 3]
+
+    function sum(...nums) {
+        return nums.length;
+    }
+    console.log(sum(10, 20, 30));   // 3
+
+    const address = {};
+    console.log(address.address?.city);    // Undefined
+
+</script>
+<body>
+    
+</body>
+</html>
