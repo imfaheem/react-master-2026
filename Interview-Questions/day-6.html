@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day - 6 JS Interview Queestions</title>
+</head>
+<body>
+
+    What is Synchronous JavaScript?
+    Synchronous means executing one task at a time, in the same order the code is written. JavaScript waits for the current task to complete before moving to the next line of code. This means each statement is executed sequentially, one after another.
+    
+    What is Asynchronous JavaScript?
+    Asynchronous JavaScript allows certain tasks to start without blocking the execution of the remaining code. Instead of waiting for a time-consuming task to finish, JavaScript continues executing the next lines of code. When the asynchronous task is completed, its callback or Promise handler is executed.
+
+    What is the difference between synchronous and asynchronous JavaScript?
+    Synchronous JS executes the code one statement at a time, in the same order it is written and waits for the current task to complete before moving to the next one. 
+    While Asynchronous JS allows long-running tasks to execute without blocking the rest of the code. It continues executing the remaining code, and once the asynchronous task is completed, its callback, Promise, or async/await handler is executed.
+    <br />OR, In other words. <br />
+    Synchronous JS executes tasks one by one and waits for each task to finish before moving to the next. Whereas Asynchronous JS allows long-running tasks to run without blocking the execution of the remaining code, and handles their result when they are completed.
+
+    Is JavaScript synchronous or asynchronous?
+    JavaScript is a single-threaded and synchronous by default. Its Asynchronous behaviour comes from the Web APIs provided by the browsers or by Node.js runtime, along with the Event loop, which allows long-running tasks to execute without blocking the main thread.
+
+    Does setTimeout() make JavaScript multi-threaded?
+    No. setTimeout() does not make JavaScript multi-threaded. JavaScript always remains single-threaded. The setTimeout() function is handled by the Browser's Web APIs (or the Node.js runtime). Once the timer expires, the Event Loop moves the callback from the Callback Queue (Macrotask Queue) to the Call Stack for execution.
+
+    What are Web APIs?
+    Web APIs are features and functionalities provided by the browser that allow JavaScript to perform tasks such as, timers, network requests, DOM manipulation, and browser events.
+
+    What is a Callback Function?
+    A callback is a function that is passed as an argument to another function so that it can be executed later, usually after a task is completed or when a specific event occurs.
+
+    What ia a Promise?
+    A promise is a built-in JavaScript object that represents the eventual result of an asynchronous operation. The result can either be fulfilled (resolved) or rejected.
+
+    What are the three states of a Promise?
+    The three states of a Promise are:
+    1. Pending
+    2. Fulfilled (Resolved) and
+    3. Rejected
+
+    What does .then() do?
+    then() is a method that is used to handle the fulfilled (resolved) result of a Promise. It is executed when the Promise is fulfilled successfully.
+
+    What does .catch() do?
+    catch() is a method that is used to handle the rejected stated of a Promise. It is executed when the Promise is rejected.
+
+    What does .finally() do?
+    finally() is a Promise method that is executed whether the Promise is resolved or rejected. It is commonly used for cleanup code.
+
+    What is Promise Chaining?
+    Promise Chaining is the process of connecting multiple .then() methods together, where the value returned from one .then() is automatically passed to the next .then().
+
+    Why we use try - catch ?
+    try - catch is used to handle runtime errors without crashing the application. If an error occurs during the execution of try block, it immediately stops the execution and the control moves to the catch block, where the error can be handled by displaying a user-friendly message.
+
+    Promise.all()
+    Waits for all Promises to succeed. If one fails, the entire Promise is rejected.
+
+    Promise.allSettled()
+    Waits for all Promises, whether they succeed or fail.
+
+    Promise.race()
+    Returns the first Promise that settles (fulfilled or rejected).
+
+    Promise.any()
+    Returns the first fulfilled Promise. Rejected Promises are ignored unless all fail.
+    
+
+
+</body>
+</html>
