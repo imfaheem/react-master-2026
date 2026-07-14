@@ -1,0 +1,29 @@
+.flex {
+    display: flex;
+	gap: 1%;
+	flex-wrap: wrap;
+	margin: 20px 10px;
+}
+
+.studentCard {
+	border: 1px solid;
+	border-radius: 5px;
+	padding: 10px;
+	margin-bottom: 15px;
+	width: 17%;
+	text-align: left;
+}
+
+.m-20 {
+	margin-block: 20px;
+}
+
+button {
+	margin: 0 auto;
+	display: block;
+}
+
+h2 {
+	text-align: left;
+	padding: 10px;
+}

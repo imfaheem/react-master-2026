@@ -4,70 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Day - 6 JS Interview Queestions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h4 {
+            margin-bottom: 0;
+        }
+
+        p {
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+    </style>
 </head>
 <body>
+    <h4>What is Synchronous JavaScript?</h4>
+    <p>Synchronous means executing one task at a time, in the same order the code is written. JavaScript waits for the current task to complete before moving to the next line of code. This means each statement is executed sequentially, one after another.</p>
 
-    What is Synchronous JavaScript?
-    Synchronous means executing one task at a time, in the same order the code is written. JavaScript waits for the current task to complete before moving to the next line of code. This means each statement is executed sequentially, one after another.
-    
-    What is Asynchronous JavaScript?
-    Asynchronous JavaScript allows certain tasks to start without blocking the execution of the remaining code. Instead of waiting for a time-consuming task to finish, JavaScript continues executing the next lines of code. When the asynchronous task is completed, its callback or Promise handler is executed.
+    <h4>What is Asynchronous JavaScript?</h4>
+    <p>Asynchronous JavaScript allows certain tasks to start without blocking the execution of the remaining code. Instead of waiting for a time-consuming task to finish, JavaScript continues executing the next lines of code. When the asynchronous task is completed, its callback or Promise handler is executed.</p>
 
-    What is the difference between synchronous and asynchronous JavaScript?
-    Synchronous JS executes the code one statement at a time, in the same order it is written and waits for the current task to complete before moving to the next one. 
-    While Asynchronous JS allows long-running tasks to execute without blocking the rest of the code. It continues executing the remaining code, and once the asynchronous task is completed, its callback, Promise, or async/await handler is executed.
-    <br />OR, In other words. <br />
-    Synchronous JS executes tasks one by one and waits for each task to finish before moving to the next. Whereas Asynchronous JS allows long-running tasks to run without blocking the execution of the remaining code, and handles their result when they are completed.
+    <h4>What is the difference between synchronous and asynchronous JavaScript?</h4>
+    <p>Synchronous JS executes the code one statement at a time, in the same order it is written and waits for the current task to complete before moving to the next one.</p>
+    <p>While Asynchronous JS allows long-running tasks to execute without blocking the rest of the code. It continues executing the remaining code, and once the asynchronous task is completed, its callback, Promise, or async/await handler is executed.</p>
+    <p>OR, In other words. Synchronous JS executes tasks one by one and waits for each task to finish before moving to the next. Whereas Asynchronous JS allows long-running tasks to run without blocking the execution of the remaining code, and handles their result when they are completed.</p>
 
-    Is JavaScript synchronous or asynchronous?
-    JavaScript is a single-threaded and synchronous by default. Its Asynchronous behaviour comes from the Web APIs provided by the browsers or by Node.js runtime, along with the Event loop, which allows long-running tasks to execute without blocking the main thread.
+    <h4>Is JavaScript synchronous or asynchronous?</h4>
+    <p>JavaScript is a single-threaded and synchronous by default. Its Asynchronous behaviour comes from the Web APIs provided by the browsers or by Node.js runtime, along with the Event loop, which allows long-running tasks to execute without blocking the main thread.</p>
 
-    Does setTimeout() make JavaScript multi-threaded?
-    No. setTimeout() does not make JavaScript multi-threaded. JavaScript always remains single-threaded. The setTimeout() function is handled by the Browser's Web APIs (or the Node.js runtime). Once the timer expires, the Event Loop moves the callback from the Callback Queue (Macrotask Queue) to the Call Stack for execution.
+    <h4>Does setTimeout() make JavaScript multi-threaded?</h4>
+    <p>No. setTimeout() does not make JavaScript multi-threaded. JavaScript always remains single-threaded. The setTimeout() function is handled by the Browser's Web APIs (or the Node.js runtime). Once the timer expires, the Event Loop moves the callback from the Callback Queue (Macrotask Queue) to the Call Stack for execution.</p>
 
-    What are Web APIs?
-    Web APIs are features and functionalities provided by the browser that allow JavaScript to perform tasks such as, timers, network requests, DOM manipulation, and browser events.
+    <h4>What are Web APIs?</h4>
+    <p>Web APIs are features and functionalities provided by the browser that allow JavaScript to perform tasks such as timers, network requests, DOM manipulation, and browser events.</p>
 
-    What is a Callback Function?
-    A callback is a function that is passed as an argument to another function so that it can be executed later, usually after a task is completed or when a specific event occurs.
+    <h4>What is a Callback Function?</h4>
+    <p>A callback is a function that is passed as an argument to another function so that it can be executed later, usually after a task is completed or when a specific event occurs.</p>
 
-    What ia a Promise?
-    A promise is a built-in JavaScript object that represents the eventual result of an asynchronous operation. The result can either be fulfilled (resolved) or rejected.
+    <h4>What ia a Promise?</h4>
+    <p>A promise is a built-in JavaScript object that represents the eventual result of an asynchronous operation. The result can either be fulfilled (resolved) or rejected.</p>
 
-    What are the three states of a Promise?
-    The three states of a Promise are:
-    1. Pending
-    2. Fulfilled (Resolved) and
-    3. Rejected
+    <h4>What are the three states of a Promise?</h4>
+    <p>The three states of a Promise are:</p>
+    <p>1. Pending</p>
+    <p>2. Fulfilled (Resolved) and</p>
+    <p>3. Rejected</p>
 
-    What does .then() do?
-    then() is a method that is used to handle the fulfilled (resolved) result of a Promise. It is executed when the Promise is fulfilled successfully.
+    <h4>What does .then() do?</h4>
+    <p>then() is a method that is used to handle the fulfilled (resolved) result of a Promise. It is executed when the Promise is fulfilled successfully.</p>
 
-    What does .catch() do?
-    catch() is a method that is used to handle the rejected stated of a Promise. It is executed when the Promise is rejected.
+    <h4>What does .catch() do?</h4>
+    <p>catch() is a method that is used to handle the rejected stated of a Promise. It is executed when the Promise is rejected.</p>
 
-    What does .finally() do?
-    finally() is a Promise method that is executed whether the Promise is resolved or rejected. It is commonly used for cleanup code.
+    <h4>What does .finally() do?</h4>
+    <p>finally() is a Promise method that is executed whether the Promise is resolved or rejected. It is commonly used for cleanup code.</p>
 
-    What is Promise Chaining?
-    Promise Chaining is the process of connecting multiple .then() methods together, where the value returned from one .then() is automatically passed to the next .then().
+    <h4>What is Promise Chaining?</h4>
+    <p>Promise Chaining is the process of connecting multiple .then() methods together, where the value returned from one .then() is automatically passed to the next .then().</p>
 
-    Why we use try - catch ?
-    try - catch is used to handle runtime errors without crashing the application. If an error occurs during the execution of try block, it immediately stops the execution and the control moves to the catch block, where the error can be handled by displaying a user-friendly message.
+    <h4>Why we use try - catch?</h4>
+    <p>try - catch is used to handle runtime errors without crashing the application. If an error occurs during the execution of try block, it immediately stops the execution and the control moves to the catch block, where the error can be handled by displaying a user-friendly message.</p>
 
-    Promise.all()
-    Waits for all Promises to succeed. If one fails, the entire Promise is rejected.
+    <h4>Promise.all()</h4>
+    <p>Waits for all Promises to succeed. If one fails, the entire Promise is rejected.</p>
 
-    Promise.allSettled()
-    Waits for all Promises, whether they succeed or fail.
+    <h4>Promise.allSettled()</h4>
+    <p>Waits for all Promises, whether they succeed or fail.</p>
 
-    Promise.race()
-    Returns the first Promise that settles (fulfilled or rejected).
+    <h4>Promise.race()</h4>
+    <p>Returns the first Promise that settles (fulfilled or rejected).</p>
 
-    Promise.any()
-    Returns the first fulfilled Promise. Rejected Promises are ignored unless all fail.
-    
-
-
+    <h4>Promise.any()</h4>
+    <p>Returns the first fulfilled Promise. Rejected Promises are ignored unless all fail.</p>
 </body>
 </html>
