@@ -86,3 +86,27 @@ table .action-buttons hr {
 	width: 0px;
 	margin: 0;
 }
+
+.navbar {
+	padding: 8px;
+	display: flex;
+	gap: 10px;
+}
+
+.navbar button {
+	background-color: #ccc;
+	font-weight: 600;
+	border-radius: 4px;
+	padding: 10px;
+	border: none;
+}
+
+.navbar button:hover {
+	cursor: pointer;
+	opacity: 0.8;
+}
+
+.center-aligned {
+	display: flex;
+	justify-content: center;
+}

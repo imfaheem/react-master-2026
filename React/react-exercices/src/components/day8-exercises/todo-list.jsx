@@ -1,34 +1,34 @@
 import { useState } from "react"
 
-export const TodoList = () => {
+export const TodoList = ({todoList, setTodoList}) => {
     const [showButton, setShowButton] = useState(false);
     const [inputText, setInputText] = useState("");
-    const [todoList, setTodoList] = useState([]);
+    const [toDoList, setToDoList] = useState([]);
     const [editIndex, setEditIndex] = useState();
 
     const handleAddList = ()=> {
         if(!inputText.trim()) return;
-        setTodoList(prev => [...prev, inputText]);
+        setToDoList(prev => [...prev, inputText]);
         setInputText("");
         setShowButton(false);
     }
 
     const handleEditList = (indexValue) => {
         if(!inputText.trim()) return;
-        setTodoList(prev => prev.map((item, index)=> index === indexValue ? inputText : item))
+        setToDoList(prev => prev.map((item, index)=> index === indexValue ? inputText : item))
         setInputText("");
         setShowButton(false);
     }
 
     const handleEditEntry = (indexValue)=> {
-        const editValue = todoList.filter((list, index) => index === indexValue);
+        const editValue = toDoList.filter((list, index) => index === indexValue);
         setInputText(editValue);
         setShowButton(true);
         setEditIndex(indexValue);
     }
 
     const handleDeleteEntry =(indexValue) => {
-        setTodoList(prev => prev.filter((list, index) => index !== indexValue))
+        setToDoList(prev => prev.filter((list, index) => index !== indexValue))
     }
 
     return (
@@ -52,7 +52,7 @@ export const TodoList = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    {todoList.map((list, index)=> (
+                    {toDoList.map((list, index)=> (
                         <tr key={index}>
                             <td>{index+1}.</td>
                             <td>{list}</td>
@@ -67,6 +67,10 @@ export const TodoList = () => {
                     ))}
                 </tbody>
             </table>
+            <br />
+            <div className="center-aligned">
+                <button onClick={()=> setTodoList(!todoList)}>{todoList ? "Hide" : "Show"} Todo List</button>
+            </div>
         </div>
     )
 }

@@ -3,62 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Day 9 - React Interview Questions</title>
+    <title>Day 8 - React Interview Questions</title>
 </head>
 <body>
+    <style>
+        h4 {
+            margin-bottom: 0;
+        }
 
-    What is a State?
-    State is data that belongs to a component and can change over time. Whenever state changes, React automatically re-renders and updates the UI.
+        p {
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+    </style>
 
-    Why can't we use normal variables instead of state?
-    We cannot use normal variables instead of state because React does not track changes to normal variables. Updating a normal variable does not trigger a re-render, so the UI remains unchanged. 
-    However, when state is updated, React detects the change, re-renders the component, and updates the UI.
+    <h4>What is a State?</h4>
+    <p>State is data that belongs to a component and can change over time. Whenever state changes, React automatically re-renders and updates the UI.</p>
 
-    What happens when state changes?
-    When the state changes, React detects the state update and re-runs the component function. A new JSX tree is created. React compares it with the previous JSX. Finally, React updates only the changed parts of the DOM, making the UI update efficiently.
+    <h4>Why can't we use normal variables instead of state?</h4>
+    <p>We cannot use normal variables instead of state because React does not track changes to normal variables. Updating a normal variable does not trigger a re-render, so the UI remains unchanged. However, when state is updated, React detects the change, re-renders the component, and updates the UI.</p>
 
-    Does React re-render the whole webpage?
-    No, React does not re-render the whole webpage. It re-runs the affected component function, compares the new JSX with the previous JSX, and updates only the changed parts of the DOM.
+    <h4>What happens when state changes?</h4>
+    <p>When the state changes, React detects the state update and re-runs the component function. A new JSX tree is created. React compares it with the previous JSX. Finally, React updates only the changed parts of the DOM, making the UI update efficiently.</p>
+
+    <h4>Does React re-render the whole webpage?</h4>
+    <p>No, React does not re-render the whole webpage. It re-runs the affected component function, compares the new JSX with the previous JSX, and updates only the changed parts of the DOM.</p>
+
+    <h4>What is useState?</h4>
+    <p>useState is a built-in React Hook. A Hook is a special function provided by React that allows functional components to store or manage state.</p>
+
+    <h4>What does useState returns?</h4>
+    <p>It returns an array which contains the current state value and a setter function used to update that state.</p>
+
+    <h4>What is batching in React?</h4>
+    <p>Batching is the process in which React groups multiple state updates into a single re-render to improve performance.</p>
+
+    <h4>What is Rendering?</h4>
+    <p>Rendering is the process in which React creates the UI initially and updates it whenever state, props, or context change.</p>
+
+    <h4>What is Virtual DOM?</h4>
+    <p>The Virtual DOM is a lightweight JavaScript representation (or copy) of the Real DOM that React uses to efficiently detect changes before updating the browser's DOM. In simple words, Virtual DOM is a JavaScript object that represents the UI.</p>
+
+    <h4>Difference between Real DOM and Virtual DOM?</h4>
+    <p>Real DOM is the actual browser DOM that displays the UI, while the Virtual DOM is a light weight representation of the Real DOM. React updates the Virtual DOM first and compares it with the previous Virtual DOM (Diffing algorithm), and then updates only the changed part of the Real DOM (Reconciliation).</p>
+
+    <h4>What is Diffing Algorithm?</h4>
+    <p>It is the process in which React compares the new Virtual DOM with the previous Virtual DOM to identify the differences between them.</p>
+
+    <h4>What is Reconciliation?</h4>
+    <p>It is the process in which React updates only the changed parts of the Real DOM based on the differences identified during Diffing.</p>
+
+    <h4>Difference between Diffing and Reconciliation?</h4>
+    <p>Diffing identifies the differences between the new Virtual DOM and the previous Virtual DOM. Whereas, Reconciliation applies those changes to the Real DOM.</p>
+
+    <h4>What is a controlled component?</h4>
+    <p>A form element whose value is controlled by React State instead of DOM.</p>
+
+    <h4>Why are controlled components preferred?</h4>
+    <p>Because React becomes the single source of truth, making validation, conditional rendering, and submission logic much easier.</p>
+
+    <h4>What does Single source of truth means?</h4>
+    <p>It means that there is only one place from where a piece of data is managed. In controlled components, that place should be React state. So that the UI always stays sync with it.</p>
+
+    <h4>What is Lifting State Up?</h4>
+    <p>Lifting State Up is the process of moving state from child components to their closest common parent so multiple components can share the same data.</p>
     
-    What is useState?
-    useState is a built-in React Hook. A Hook is a special function provided by React that allows functional components to store or manage state.
-
-    What does useState returns?
-    It returns an array which contains the current state value and a setter function used to update that state.
-
-    What is batching in React?
-    Batching is the process in which React groups multiple state updates into a single re-render to improve performance.
-
-    What is Rendering?
-    Rendering is the process in which React creates the UI initially and updates it whenever state, props, or context change.
-
-    What is Virtual DOM?
-    The Virtual DOM is a lightweight JavaScript representation (or copy) of the Real DOM that React uses to efficiently detect changes before updating the browser's DOM.
-    In simple words, Virtual DOM is a JavaScript object that represents the UI.
-
-    Difference between Real DOM and Virtual DOM?
-    Real DOM is the actual browser DOM that displays the UI, while the Virtual DOM is a light weight representation of the Real DOM.
-    React updates the Virtual DOM first and compares it with the previous Virtual DOM (Diffing algorithm), and then updates only the changed part of the Real DOM (Reconcilation).
-
-    What is Diffing Algorithm?
-    It is the process in which React compares the new Virtual DOM with the previous Virtual DOM to identify the differences between them.
-
-    What is Reconciliation?
-    It is the process in which React updates only the changed parts of the Real DOM based on the differences identified during Diffing.
-
-    Difference between Diffing and Reconciliation?
-    Diffing identifies the differences between the new Virtual DOM and the previous Virtual DOM. Whereas, Reconciliation applies those changes to the Real DOM.
-
-    What is a controlled component?
-    A form element whose value is controlled by React State instead of DOM.
-
-    Why are controlled components preferred?
-    Because React becomes the single source of truth, making validation, conditional rendering, and submission logic much easier.
-
-    What does Single source of truth means?
-    It means that there is only one place from where a piece of data is managed. In controlled components, that place should be React state. So that the UI always stays sync with it.
+    <h4>Why Lifting State Up is needed?</h4>
+    <p>It is needed to keep mutiple components synchronized and avoid duplicating state. By lefting state up to the closest common parent, sibling components can access the same data from a single source of truth.</p>
     
+    <h4>How communication occurs between Parent and Child?</h4>
+    <p>React follows a one-way data flow, where data flows from Parent to Child through props. The parent component passes state or values to child components using props.</p>
 
+    <h4>How do sibling communicate?</h4>
+    <p>Sibling components do not communicate directly. They communicate through their common parent, where the shared state is stored, which passes it to other sibling using props.</p>
+
+    <h4>What is Prop Drilling?</h4>
+    <p>Prop Drilling is the process of passing props through multiple intermediate components that do not actually need those props, and only deliver them to a deeply nested child component.</p>
 
 </body>
 </html>

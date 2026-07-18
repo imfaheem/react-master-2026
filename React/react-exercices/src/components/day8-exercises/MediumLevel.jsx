@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { single_student, students, } from "./data";
 
-export const MediumLevel = () => {
+export const MediumLevel = ({mediumLevel, setMediumLevel}) => {
     const [student, setStudent] = useState(single_student);
     const [isStudents, setIsStudents] = useState(students);
     const [isActive, setIsActive] = useState(false);
@@ -96,6 +96,11 @@ export const MediumLevel = () => {
 
             <button onClick={handleNameUppercase}>students name Uppercase</button>
             <button onClick={handleIsActiveReverse}>all isActive reverse</button>
+
+            <br />
+            <div className="center-aligned">
+                <button onClick={()=> setMediumLevel(!mediumLevel)}>{mediumLevel ? "Hide" : "Show"} Medium Level</button>
+            </div>
         </div>
     )
 }
