@@ -7,3 +7,40 @@
 .m-block-20 {
 	margin-block: 20px;
 }
+
+.studentcard {
+	font-size: 16px;
+	line-height: 1.4;
+}
+
+.flex {
+	display: flex;
+	gap: 16px;
+}
+.flex-1 {
+	border: 1px solid #ccc;
+	padding: 8px 16px;
+}
+
+.m-block-10 {
+	margin-block: 10px;
+}
+
+input[type="text"], textarea, select {
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	padding: 5px 10px;
+	height: 22px;
+	width: 200px;
+	resize: none;
+}
+
+select {
+	height: 30px;
+	cursor: pointer;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+	cursor: pointer;
+}

@@ -3,7 +3,7 @@ export const StudentCard = (props) => {
         console.log(name)
     }
     return (
-        <div className="">
+        <div className="studentcard">
             <p>{props.id}. Name: {props.name}</p>
             <p>Age: {props.age}</p>
             <p>Course: {props.course}</p>
