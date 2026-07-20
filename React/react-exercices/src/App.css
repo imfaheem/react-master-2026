@@ -51,13 +51,13 @@ table {
 	width: 720px;
 }
 
-table .action-buttons {
+.action-buttons {
 	align-items: center;
 	display: flex;
 	gap: 10px;
 }
 
-table .action-buttons button {
+.action-buttons button {
 	border: none;
 	width: 100px;
 	padding: 8px;
@@ -67,20 +67,20 @@ table .action-buttons button {
 	opacity: 0.8;
 }
 
-table .action-buttons button:hover {
+.action-buttons button:hover {
 	opacity: 1;
 	color: #000;
 }
 
-table .action-buttons button.edit {
+.action-buttons button.edit {
 	background-color: lightblue;
 }
 
-table .action-buttons button.delete {
+.action-buttons button.delete {
 	background-color: lightcoral;
 }
 
-table .action-buttons hr {
+.action-buttons hr {
 	border: 1px solid #333;
 	height: 20px;
 	width: 0px;
