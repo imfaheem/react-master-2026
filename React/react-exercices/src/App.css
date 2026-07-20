@@ -1,0 +1,112 @@
+/* ===== CSS STYLES ===== */
+.flex {
+    display: flex;
+}
+
+.flex .flex-1 {
+	border: 1px solid #ddd;
+	padding: 10px;
+	gap: 12px;
+	flex: 1;
+}
+
+button {
+	display: block;
+	margin: 5px 0;
+}
+
+
+table {
+	border-spacing: 0;
+	
+}
+
+table tr th, table tr td {
+	border: 1px solid #ddd;
+	padding: 5px;
+}
+
+.input-field {
+	align-items: center;
+	display: flex;
+	gap: 12px;
+}
+
+.input-field input {
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	height: 32px;
+	width: 250px;
+	text-align: 10px;
+	padding: 6px 12px;
+}
+
+.input-field button {
+	padding: 6px 12px;
+	font-size: 16px;
+	height: 40px;
+}
+
+table {
+	width: 720px;
+}
+
+.action-buttons {
+	align-items: center;
+	display: flex;
+	gap: 10px;
+}
+
+.action-buttons button {
+	border: none;
+	width: 100px;
+	padding: 8px;
+	font-size: 16px;
+	color: #fff;
+	cursor: pointer;
+	opacity: 0.8;
+}
+
+.action-buttons button:hover {
+	opacity: 1;
+	color: #000;
+}
+
+.action-buttons button.edit {
+	background-color: lightblue;
+}
+
+.action-buttons button.delete {
+	background-color: lightcoral;
+}
+
+.action-buttons hr {
+	border: 1px solid #333;
+	height: 20px;
+	width: 0px;
+	margin: 0;
+}
+
+.navbar {
+	padding: 8px;
+	display: flex;
+	gap: 10px;
+}
+
+.navbar button {
+	background-color: #ccc;
+	font-weight: 600;
+	border-radius: 4px;
+	padding: 10px;
+	border: none;
+}
+
+.navbar button:hover {
+	cursor: pointer;
+	opacity: 0.8;
+}
+
+.center-aligned {
+	display: flex;
+	justify-content: center;
+}

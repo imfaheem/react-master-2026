@@ -1,0 +1,100 @@
+/* ====================
+CUSTOM CSS FOR PROJECT
+==================== */
+main {
+    padding: 12px;
+    width: 100%;
+}
+
+h2 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+section {
+    box-shadow: 0 0 2px 2px #ddd;
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 12px;
+    margin: 8px;
+    flex: 1;
+}
+
+section h3 {
+    text-transform: uppercase;
+    margin: 0;
+    color: #333;
+}
+
+.flex {
+    display: flex;
+    gap: 8px;
+}
+
+.student-form > div {
+    margin: 5px;
+}
+
+.student-form > div > span {
+    display: inline-block;
+    width: 110px;
+}
+
+.student-form > div > input[type="text"],
+.student-form > div > input[type="number"],
+.student-form > div > select {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 8px;
+    width: 200px;
+}
+
+.button-section {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.button-section button {
+    cursor: pointer;
+    padding: 10px;
+    font-size: 16px;
+    width: 120px;
+}
+
+.student-form .flex-1 {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    gap: 10px;
+    border: none;
+}
+
+.student-form .flex-1 input {
+    height: 28px;
+    width: 80px;
+}
+
+.student-form .flex-1 textarea {
+    height: 50px;
+    width: 100%;
+    resize: none;
+}
+
+.student-card {
+    margin-top: 10px;
+}
+
+.student-card p,
+.student-card b {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.action-buttons {
+    margin-top: 12px;
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
