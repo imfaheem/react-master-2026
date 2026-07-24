@@ -15,6 +15,7 @@ Automatically formats interview question HTML files with proper semantic HTML st
 1. **Wraps Questions in `<h4>` tags** - Identifies plain text questions and wraps them
 2. **Wraps Answers in `<p>` tags** - Identifies plain text answers and wraps them
 3. **Adds Internal CSS Styling** - Adds a `<style>` block with:
+   - `body { font-family: Arial, sans-serif; }` - Applies Arial as the default font family
    - `h4 { margin-bottom: 0; }` - Removes bottom margin from questions
    - `p { margin-top: 0; }` - Removes top margin from answers
 

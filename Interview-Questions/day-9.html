@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day - 9 React Hooks</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        h4 { margin-bottom: 0; }
+        p { margin-top: 0; }
+    </style>
+</head>
+<body>
+
+    <h4>What is Hooks?</h4>
+    <p>Hooks are special React functions introduced in React 16.8, that allow Functional Components to access React features such as state, side effects, context, refs, and other React capabilities.</p>
+
+    <h4>Why were Hooks introduced?</h4>
+    <p>Hooks were introduced to solve several problems with class components. They make it easier to reuse stateful logic between components using custom hooks, reduce the complexity of class components, eliminate the need for "this" binding, and make React code easier to read, maintain, and test.</p>
+
+    <h4>Why do Hook names start with use?</h4>
+    <p>Hook names start with use because React and the ESLint Rules of Hooks recognize functions with this prefix as Hooks. This helps enforce the Rules of Hooks and also makes it clear to developers that the function uses React Hook features.</p>
+
+    <h4>Can Hooks be used inside class components?</h4>
+    <p>No, Hooks cannot be used inside class components. It can only be used and access inside Functional components or inside a Custom Hook.</p>
+
+    <h4>What is useEffect?</h4>
+    <p>useEffect is a React Hook that runs after React renders the component and updated the DOM. It is used to perform side effects such as fetching data, interacting with browser APIs, starting timers, subscribing to events, or cleaning up resources.</p>
+
+    <h4>What is a side effect?</h4>
+    <p>A side effect is any operation that interacts with something outside React's rendering process. Such as APIs calls, localStorage, timers, event listeners, or manually updating the DOM.</p>
+
+    <h4>What is the dependency array?</h4>
+    <p>The dependency array is the second argument of useEffect. It tells React which values to watch and when to re-run the effect.</p>
+
+    <h4>What is a Cleanup Function?</h4>
+    <p>A Cleanup Function is a function returned from useEffect that React executes before the component unmounts or before the effect runs again due to dependency changes.</p>
+
+    <h4>When does the Cleanup Function run?</h4>
+    <p>It runs, <b>1. Before the component unmounts.</b> and <b>2. Before re-running the effect when dependencies change.</b></p>
+
+    <h4>What is a Memory Leak in React?</h4>
+    <p>A memory leak is a situation where a component is unmounted or removed, but the resources it created are still running or are not properly cleaned up. e.g. timers (setInterval, setTimeout), event listeners, subscriptions, and other background tasks.
+    This leads to unnecessary memory usage and performance issues.
+    In React, we prevent memory leaks by returning a cleanup function from useEffect, where we clear timers, remove event listeners, unsubscribe from subscriptions, or clean up other resources.</p>
+
+    <h4>What is Browser Storage?</h4>
+    <p>Browser Storage is a feature provided by web browsers that allows websites to store data on the user's browser.
+    It helps save information such as user preferences, authentication data, and application state without storing it on the server. <br />
+    There are two main types of browser storage: <b>1. Local Storage</b> and <b>2. Session Storage</b></p>
+
+    <h4>What is Local Storage?</h4>
+    <p>Local storage is a browser storage mechanism that stores data permanently in the user's browser.
+    The stored data remains available even if:<br />
+    1. The page refreshed or reloaded.<br />
+    2. The browser is closed and opened again.<br />
+    3. The computer system is restarted.<br />
+    The data stays in Local Storage until it is explicitly removed by the application, the user clears the browser storage, or JavaScript removes it.</p>
+    <p>OR</p>
+    <p>Local Storage is a browser-based storage that persists data even after page reloads, browser restarts, and system restarts, until it is manually removed.</p>
+</body>
+</html>

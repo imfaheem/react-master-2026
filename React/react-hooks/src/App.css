@@ -1,0 +1,25 @@
+.main-wrapper {
+	padding: 12px;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+	gap: 16px;
+}
+
+nav ul li {
+	font-weight: 600;
+	cursor: pointer;
+}
+
+nav ul li:hover {
+	color: blueviolet;
+}
+
+
+input {
+	display: inline-block;
+}
