@@ -23,3 +23,13 @@ nav ul li:hover {
 input {
 	display: inline-block;
 }
+
+.m-20 {
+	margin: 20px 5px;
+}
+
+.flex {
+	display: flex;
+	gap: 10px;
+}
+
