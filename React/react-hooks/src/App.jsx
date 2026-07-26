@@ -14,6 +14,7 @@ import { ThemeContext } from './context/ThemeContext';
 import { LanguageContext } from './context/LanguageContext';
 import { Dashboard } from './components/Dashboard';
 import { ThemeSwitcher } from './context/ThemeSwitcher';
+import { Users } from './components/Users';
 
 function App() {
 
@@ -54,6 +55,8 @@ function App() {
 			<ThemeSwitcher.Provider value={{theme, toggleTheme}}>
 				{showContextApi && <ContextApi />}
 			</ThemeSwitcher.Provider>
+
+			<Users />
 
     	</div>
   	)
