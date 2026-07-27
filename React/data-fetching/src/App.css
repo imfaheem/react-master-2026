@@ -1,0 +1,34 @@
+.main-class {
+    padding: 0 10px;
+}
+
+.m-10 {
+    margin: 10px;
+}
+.mb-10 {
+    margin-bottom: 10px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.user-container {
+    border: 1px dashed #ddd;
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+    padding: 8px;
+    width: 300px;
+}
+
+.flex {
+    display: flex;
+    gap: 20px;
+}
+.flex-1 {
+    border-right: 1px solid #ccc;
+    flex: 1;
+    height: 90dvh;
+    overflow-y: auto;
+}

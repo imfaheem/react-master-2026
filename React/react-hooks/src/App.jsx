@@ -14,6 +14,8 @@ import { ThemeContext } from './context/ThemeContext';
 import { LanguageContext } from './context/LanguageContext';
 import { Dashboard } from './components/Dashboard';
 import { ThemeSwitcher } from './context/ThemeSwitcher';
+import { Users } from './components/Users';
+import { CustomHooks } from './day-11/CustomHooks';
 
 function App() {
 
@@ -36,25 +38,31 @@ function App() {
 				showUseEffect={showUseEffect}
 				setContextApi={setContextApi}
 			/>
-			{showUseEffect && <UseEffectHook setShowProject={setShowProject} />}
-			{showProject && <FinalProject />}
-			{showUseRef && <UseRefHook />}
+			<div className='flex'>
+				<div className='flex-1'>
+					{showUseEffect && <UseEffectHook setShowProject={setShowProject} />}
+					{showProject && <FinalProject />}
+					{showUseRef && <UseRefHook />}
 
-			<LanguageContext.Provider value="English">
-				<ThemeContext.Provider value="dark">
-					<AuthContext.Provider value="Faheem">
-						<Navbar />
-					</AuthContext.Provider>
-					<Dashboard />
-					<Home />
-				</ThemeContext.Provider>
-				<Footer />
-			</LanguageContext.Provider>
+					<LanguageContext.Provider value="English">
+						<ThemeContext.Provider value="dark">
+							<AuthContext.Provider value="Faheem">
+								<Navbar />
+							</AuthContext.Provider>
+							<Dashboard />
+							<Home />
+						</ThemeContext.Provider>
+						<Footer />
+					</LanguageContext.Provider>
 
-			<ThemeSwitcher.Provider value={{theme, toggleTheme}}>
-				{showContextApi && <ContextApi />}
-			</ThemeSwitcher.Provider>
+					<ThemeSwitcher.Provider value={{theme, toggleTheme}}>
+						{showContextApi && <ContextApi />}
+					</ThemeSwitcher.Provider>
 
+					<Users />
+				</div>
+				<CustomHooks />
+			</div>
     	</div>
   	)
 }

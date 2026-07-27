@@ -33,3 +33,41 @@ input {
 	gap: 10px;
 }
 
+.flex-1 {
+	flex: 3;
+}
+
+.custom-hooks {
+	border-left: 1px solid #444;
+	padding: 0 10px;
+	flex: 5;
+}
+
+.custom-hooks h1 {
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: bold;
+	font-size: 32px;
+	margin-top: 5px;
+}
+
+.custom-hooks section {
+	display: flex;
+	gap: 8px;
+}
+
+.custom-hooks section > div {
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	padding: 5px;
+	flex: 1;
+}
+
+.custom-hooks section > div h4 {
+	margin-top: 0;
+	color: #333;
+}
+
+.custom-hooks .btn-section {
+	margin: 12px 0;
+}

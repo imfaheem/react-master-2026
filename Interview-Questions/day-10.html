@@ -4,33 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Day - 10: React Hooks</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        h4 { margin-bottom: 0; }
+        p { margin-top: 0; }
+    </style>
 </head>
 <body>
 
-    What is useRef Hook?
-    useRef is a React Hook that stores and remembers a mutable value that survives across multiple renders, without re-rendering the component when the value changes.
+    <h4>What is useRef Hook?</h4>
+    <p>useRef is a React Hook that stores and remembers a mutable value that survives across multiple renders, without re-rendering the component when the value changes.</p>
 
-    Why do we use to 'useRef' Hook?
-    We use useRef to store or remember a mutable value that survives across re-renders, without causing the component to re-render when that value is updated.
+    <h4>Why do we use to 'useRef' Hook?</h4>
+    <p>We use useRef to store or remember a mutable value that survives across re-renders, without causing the component to re-render when that value is updated.</p>
 
-    What does useRef return?
-    It returns an object with a single property. i.e. <code>{ current: initialValue }</code>
+    <h4>What does useRef return?</h4>
+    <p>It returns an object with a single property. i.e. <code>{ current: initialValue }</code></p>
 
-    What is ContextAPI?
-    Context API is a React feature that allows us to share data between components without passing props manually through every intermediate component through prop drilling.
+    <h4>What is ContextAPI?</h4>
+    <p>Context API is a React feature that allows us to share data between components without passing props manually through every intermediate component through prop drilling.</p>
 
-    What is createContext?
-    createContext is a special type of React function that returns an object i.e. Context that contains 2 properties. <br />
-    1. Context Provider (Provider) and 2. useContext (Comsumer)
+    <h4>What is createContext?</h4>
+    <p>createContext is a special type of React function that returns an object i.e. Context that contains 2 properties. <br />
+    1. Context Provider (Provider) and 2. useContext (Comsumer)</p>
 
-    What is Context Provider?
-    A Context Provider is a React component that provides a value to all of its descendant components within the same Context. In simple words, it shares data with all the components inside it.
+    <h4>What is Context Provider?</h4>
+    <p>A Context Provider is a React component that provides a value to all of its descendant components within the same Context. In simple words, it shares data with all the components inside it.</p>
 
-    What is useContext Hook?
-    useContext is a React Hook that allows a component to access the values of a Context provided by the Context Provider without passing props manually through every level of the component tree.
+    <h4>What is useContext Hook?</h4>
+    <p>useContext is a React Hook that allows a component to access the values of a Context provided by the Context Provider without passing props manually through every level of the component tree.</p>
     
-    Why was Context API introduced?
-    Context API was introduced to avoid prop drilling by allowing data to be shared directly with deeply nested components without passing props through every intermediate component.
+    <h4>Why was Context API introduced?</h4>
+    <p>Context API was introduced to avoid prop drilling by allowing data to be shared directly with deeply nested components without passing props through every intermediate component.</p>
     
+    <h4>What is a Custom Hook?</h4>
+    <p>A Custom Hook is a reusable JavaScript function that starts with prefix 'use', can use React Hooks internally, and allows sharing stateful logic across multiple components.</p>
+
+    <h4>Why do we use Custom Hooks?</h4>
+    <p>We use Custom Hooks to avoid duplicate logic, improve code reusability, and keep components clean and maintainable.</p>
+
+    <h4>Does a Custom Hook share state between components?</h4>
+    <p>No. A Custom Hook does not shares state. It shares stateful logic. Every component that calls a Custom Hook gets its own independent state.</p>
+
 </body>
 </html>

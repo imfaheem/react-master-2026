@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 11 - Data Fetching</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        h4 { margin-bottom: 0; }
+        p { margin-top: 0; }
+    </style>
+</head>
+<body>
+    <h4>What is Data Fetching?</h4>
+    <p>Data fetching is a process of requesting data from another source, usually a server or API, and using that data inside the application.</p>
+
+    <h4>What is a Server?</h4>
+    <p>A Server is a computer or an application program that receives requests, processes them, and sends back responses.</p>
+
+    <h4>What is an API?</h4>
+    <p>An API (Application Programming Interface) is a communication interface that allows different software applications to exchange data.<br />
+    In web development, a React frontend sends requests to an API, and the API communicates with the backend and database, then returns data, usually in JSON format.<br />
+    APIs also enforce security, validation, and business rules, preventing the frontend from accessing the database directly.</p>
+
+    <h4>What is REST API?</h4>
+    <p>A REST (Representational State Transfer) API is a type of web API that follows a set of architectural principles and constraints for communication between a client and a server.<br />
+    It typically uses HTTP methods such as GET, POST, PUT, and DELETE to perform CRUD operations and usually exchanges data in JSON format.</p>
+
+    <h4>What is a Request?</h4>
+    <p>A Request is simply a message sent from the client (React app) to the server asking it to perform some action such as fetch, add, delete or update etc.</p>
+
+    <h4>What is a Response?</h4>
+    <p>A Response is the message sent back by the server after processing the client's request. It contains the requested data, a success or error status, and other relevant information.</p>
+
+    <h4>What is JSON?</h4>
+    <p>JSON (JavaScript Object Notation) is a lightweight, language-independent format used to exchange structured data between applications.<br />
+    React applications commonly receive API data in JSON format and convert it into JavaScript objects or arrays using <code>response.json()</code>.</p>
+
+    <h4>Why do we need a loading state?</h4>
+    <p>A loading state is used to inform the user that the application is currently fetching data from the server. During this time, the request is in progress (or pending).<br />
+    Instead of showing a blank screen, we display a loading indicator to improve the user experience.</p>
+
+    <h4>Why do we need an error state?</h4>
+    <p>An Error state is used to handle API failures, such as network issues, server errors, or an invalid API endpoint.<br />
+    Instead of crashing or displaying a blank screen, the application displays a meaningful error message so that users understand what went wrong.</p>
+
+    <h4>Why do we use AbortController?</h4>
+    <p>We use AbortController to cancel an in-progress API request when it's no longer needed, such as when a component unmounts, helping prevent memory leaks and unwanted state updates.</p>
+    
+</body>
+</html>
