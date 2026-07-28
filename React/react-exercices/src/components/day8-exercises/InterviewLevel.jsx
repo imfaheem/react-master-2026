@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { newStdList } from "./data";
 
-export const InterviewLevel = ({interviewLevel, setInterviewLevel}) => {
+export const InterviewLevel = ({interviewLevel, toggle}) => {
     const [students, setStudents] = useState(newStdList);
 
     const [searchInput, setSearchInput] = useState("");
@@ -138,7 +138,7 @@ export const InterviewLevel = ({interviewLevel, setInterviewLevel}) => {
 
             <br />
             <div className="center-aligned">
-                <button onClick={()=> setInterviewLevel(!interviewLevel)}>{interviewLevel ? "Hide" : "Show"} Interview Level</button>
+                <button onClick={toggle}>{interviewLevel ? "Hide" : "Show"} Interview Level</button>
             </div>
         </div>
     )

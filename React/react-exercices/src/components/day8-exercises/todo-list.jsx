@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-export const TodoList = ({todoList, setTodoList}) => {
+export const TodoList = ({todoList, toggle}) => {
     const [showButton, setShowButton] = useState(false);
     const [inputText, setInputText] = useState("");
     const [toDoList, setToDoList] = useState([]);
@@ -69,7 +69,7 @@ export const TodoList = ({todoList, setTodoList}) => {
             </table>
             <br />
             <div className="center-aligned">
-                <button onClick={()=> setTodoList(!todoList)}>{todoList ? "Hide" : "Show"} Todo List</button>
+                <button onClick={toggle}>{todoList ? "Hide" : "Show"} Todo List</button>
             </div>
         </div>
     )

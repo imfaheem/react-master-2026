@@ -110,3 +110,50 @@ table {
 	display: flex;
 	justify-content: center;
 }
+
+
+.react-dashboard > h1 {
+	font-size: 32px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.react-dashboard h4 {
+	margin: 10px 0;
+}
+
+.react-dashboard .dashboard {
+	box-shadow: 0 0 2px 2px #ccc;
+	border-radius: 5px;
+	padding: 12px;
+	width: 97%;
+	margin: 0 auto;
+	margin-bottom: 10px;
+}
+
+.react-dashboard .dashboard h3 {
+	margin-top: 0;
+}
+
+.react-dashboard section {
+	border: 1px solid #ddd;
+	padding: 10px;
+	flex: 1;
+}
+
+.react-dashboard .flex > section  {
+	overflow-y: auto;
+	height: 600px;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.react-dashboard input {
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	padding: 10px;
+	width: 100%;
+	box-sizing: border-box;
+}

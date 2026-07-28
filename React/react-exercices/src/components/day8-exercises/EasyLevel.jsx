@@ -1,6 +1,6 @@
 import { QuestionAnswers } from "./QuestionAnswers";
 
-export const EasyLevel = ({easyLevel, setEasyLevel}) => {
+export const EasyLevel = ({ easyLevel, toggle }) => {
     // Phase 1:
     const numbers = [10, 20, 30, 40, 50];
 
@@ -67,7 +67,7 @@ export const EasyLevel = ({easyLevel, setEasyLevel}) => {
             <QuestionAnswers />
             <br />
             <div className="center-aligned">
-                <button onClick={()=> setEasyLevel(!easyLevel)}>{easyLevel ? "Hide" : "Show"} Easy Level</button>
+                <button onClick={toggle}>{easyLevel ? "Hide" : "Show"} Easy Level</button>
             </div>
         </div>
     )
