@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { single_student, students, } from "./data";
 
-export const MediumLevel = ({mediumLevel, setMediumLevel}) => {
+export const MediumLevel = ({mediumLevel, toggle}) => {
     const [student, setStudent] = useState(single_student);
     const [isStudents, setIsStudents] = useState(students);
     const [isActive, setIsActive] = useState(false);
@@ -99,7 +99,7 @@ export const MediumLevel = ({mediumLevel, setMediumLevel}) => {
 
             <br />
             <div className="center-aligned">
-                <button onClick={()=> setMediumLevel(!mediumLevel)}>{mediumLevel ? "Hide" : "Show"} Medium Level</button>
+                <button onClick={toggle}>{mediumLevel ? "Hide" : "Show"} Medium Level</button>
             </div>
         </div>
     )
