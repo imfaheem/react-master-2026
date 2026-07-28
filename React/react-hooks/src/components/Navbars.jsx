@@ -2,6 +2,7 @@ export const Navbars = ({
     setUseEffect,
     setUseRef,
     setContextApi,
+    setReactMemo,
 }) => {
     return (
         <nav>
@@ -11,6 +12,7 @@ export const Navbars = ({
                 <li onClick={()=> setContextApi(prev => !prev)}>ContextAPI: UseContext</li>
                 <li>Use Memo</li>
                 <li>Use Callback</li>
+                <li onClick={()=> setReactMemo(prev => !prev)}>React.memo</li>
             </ul>
         </nav>
     )
