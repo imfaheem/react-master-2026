@@ -71,3 +71,29 @@ input {
 .custom-hooks .btn-section {
 	margin: 12px 0;
 }
+
+.react-memo-components {
+	margin-top: 12px;
+	flex-wrap: wrap;
+	display: flex;
+	gap: 16px;
+}
+
+.react-memo-components > section {
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	padding: 8px;
+	width: 22%;
+}
+
+.react-memo-components > section h4 {
+	margin: 5px;
+}
+
+.react-memo-components .parent {
+	width: 100%;
+}
+
+.react-memo-components .parent {
+
+}
