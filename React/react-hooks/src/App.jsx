@@ -99,14 +99,15 @@ function App() {
 						</>
 						)
 					}
-					
 				</div>
 
 				{customHook && <CustomHooks /> }
-				{showCallback && <UserDashboard /> }
-
-				<ProductDashboard />
-
+				{showCallback && (
+					<>
+						<UserDashboard />
+						<ProductDashboard />
+					</>
+				) }
 			</div>
     	</div>
   	)
