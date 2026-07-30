@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Day 12 & 13 - React.Memo</title>
+    <title>Day 12, 13, 14 & 15 - React.memo, useCallback and useMemo</title>
 </head>
 <body>
     
@@ -23,6 +23,19 @@
     <br />OR<br />
     React.memo is a Higher-Order Component (HOC) that memoizes a function component. 
     If the component receives the same props as the previous render, React reuses the previous result instead of executing the component again.
+
+    What is useCallback?
+    useCallback is a React Hook that memoizes a function reference. When its dependencies remain unchanged, useCallback returns the same function reference from the previous render instead of creating a new function reference.
+
+    What is the function of dependency array in useCallback Hook?
+    The dependency array in useCallback tracks the values used by the callback. When those dependencies do not change, useCallback keeps the same function reference. When any dependency changes, it provides a new function reference.
+
+    What if the dependency array is empty [] in useCallback?
+    It means that there is no changing dependencies inside the Callback function.
+
+    
+
+    
     
 </body>
 </html>
