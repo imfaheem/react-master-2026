@@ -18,7 +18,7 @@
     <strong>Commit Phase:</strong> React applies the necessary changes to the real DOM and the browser displays them.
 
     What is React.memo?
-    React.memo is actually a performance optimization technique for functional components. It prevents unnecessary re-renders by comparing the component's previous and new props.
+    React.memo is actually a performance optimization technique for functional components. It prevents unnecessary re-renders by comparing the component's previous props and new props.
     If the props are unchanged, React skips rendering that component. 
     <br />OR<br />
     React.memo is a Higher-Order Component (HOC) that memoizes a function component. 
@@ -33,9 +33,17 @@
     What if the dependency array is empty [] in useCallback?
     It means that there is no changing dependencies inside the Callback function.
 
-    
+    What is useMemo hook?
+    useMemo is a React Hook that stores the value returned by a callback function and reuses the previously stored value on future re-renders when its dependencies remain unchanged.
 
-    
-    
+    Why do we need useMemo hook?
+    We need `useMemo` to avoid unnecessary recalculations and improve performance. It is especially useful when a calculation is expensive or when a computed value needs to keep the same reference between re-renders.
+
+    What is the function of dependency array in useMemo Hook?
+    The dependency array in useMemo tracks the values that the callback function depends on. If the dependencies remain unchanged, useMemo reuses the previously stored value. If any dependency changes, useMemo executes the callback function again and stores its new returned value.
+
+    Difference between useMemo and useCallback?
+    <strong>useMemo:</strong> It memoizes the result of a callback function and returns the memoized value, which can be a single value, an array, or an object. The memoized result can be passed to a child component through props and may help skip unnecessary re-renders if the child component is wrapped with React.memo.<br />
+    <strong>useCallback:</strong> It memoizes the function reference itself and returns the memoized function reference, not the result returned by the function. If the function reference is passed to a child component through props, the child component may skip unnecessary re-renders if it is wrapped with React.memo.
 </body>
 </html>

@@ -22,6 +22,7 @@ import { MemoExample } from './day-14-15/MemoExample';
 import { UseCallback } from './day-14-15/UseCallback';
 import { UserDashboard } from './day14-mini-project/UserDashboard';
 import { ProductDashboard } from './day14-assignment/ProductDashboard';
+import { UseMemo } from './day-14-15/UseMemo';
 
 function App() {
 	const [count, setCount] = useState(0);
@@ -30,6 +31,7 @@ function App() {
 	const [showContextApi, setContextApi] = useState(false);
 	const [showCallback, setUseCallback] = useState(false);
 	const [showReactMemo, setReactMemo] = useState(false);
+	const [showUseMemo, setUseMemo] = useState(false);
 
 	const [showProject, setShowProject] = useState(false);
 	const [customHook] = useState(false);
@@ -59,6 +61,7 @@ function App() {
 				setContextApi={setContextApi}
 				setReactMemo={setReactMemo}
 				setUseCallback={setUseCallback}
+				setUseMemo={setUseMemo}
 			/>
 			<div className='flex'>
 				<div className='flex-1'>
@@ -90,6 +93,8 @@ function App() {
 							<Parent />
 						</>
 					)}
+
+					{showUseMemo && <UseMemo />}
 
 					{showCallback && (
 						<>

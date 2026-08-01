@@ -4,6 +4,7 @@ export const Navbars = ({
     setContextApi,
     setUseCallback,
     setReactMemo,
+    setUseMemo
 }) => {
     return (
         <nav>
@@ -12,7 +13,7 @@ export const Navbars = ({
                 <li onClick={()=> setUseRef(prev => !prev)}>Use Ref</li>
                 <li onClick={()=> setContextApi(prev => !prev)}>ContextAPI: UseContext</li>
                 <li onClick={()=> setUseCallback(prev => !prev)}>Use Callback</li>
-                <li>Use Memo</li>
+                <li onClick={()=> setUseMemo(prev => !prev)}>Use Memo</li>
                 <li onClick={()=> setReactMemo(prev => !prev)}>React.memo</li>
             </ul>
         </nav>
