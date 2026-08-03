@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 12, 13, 14 & 15 - React.memo, useCallback and useMemo</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        h4 { margin-bottom: 0; }
+        p { margin-top: 0; }
+    </style>
+</head>
+<body>
+    <h4>What is rendering in React?</h4>
+    <p>Rendering is the process where React executes a component function to produce a new description of the UI (React elements). It does not automatically mean the DOM is updated.</p>
+
+    <h4>Does every render update the DOM?</h4>
+    <p>No. Every render executes the component again, but React updates the DOM only if the rendered output differs from the previous one.</p>
+
+    <h4>What is the difference between the Render Phase and the Commit Phase?</h4>
+    <p><strong>Render Phase:</strong> React executes components and prepares the next UI tree. <br />
+    <strong>Commit Phase:</strong> React applies the necessary changes to the real DOM and the browser displays them.</p>
+
+    <h4>What is React.memo?</h4>
+    <p>React.memo is actually a performance optimization technique for functional components. It prevents unnecessary re-renders by comparing the component's previous props and new props.
+    If the props are unchanged, React skips rendering that component. 
+    <br />OR<br />
+    React.memo is a Higher-Order Component (HOC) that memoizes a function component. 
+    If the component receives the same props as the previous render, React reuses the previous result instead of executing the component again.</p>
+
+    <h4>What is useCallback?</h4>
+    <p>useCallback is a React Hook that memoizes a function reference. When its dependencies remain unchanged, useCallback returns the same function reference from the previous render instead of creating a new function reference.</p>
+
+    <h4>What is the function of dependency array in useCallback Hook?</h4>
+    <p>The dependency array in useCallback tracks the values used by the callback. When those dependencies do not change, useCallback keeps the same function reference. When any dependency changes, it provides a new function reference.</p>
+
+    <h4>What if the dependency array is empty [] in useCallback?</h4>
+    <p>It means that there is no changing dependencies inside the Callback function.</p>
+
+    <h4>What is useMemo hook?</h4>
+    <p>useMemo is a React Hook that stores the value returned by a callback function and reuses the previously stored value on future re-renders when its dependencies remain unchanged.</p>
+
+    <h4>Why do we need useMemo hook?</h4>
+    <p>We need <code>useMemo</code> to avoid unnecessary recalculations and improve performance. It is especially useful when a calculation is expensive or when a computed value needs to keep the same reference between re-renders.</p>
+
+    <h4>What is the function of dependency array in useMemo Hook?</h4>
+    <p>The dependency array in useMemo tracks the values that the callback function depends on. If the dependencies remain unchanged, useMemo reuses the previously stored value. If any dependency changes, useMemo executes the callback function again and stores its new returned value.</p>
+
+    <h4>Difference between useMemo and useCallback?</h4>
+    <p><strong>useMemo:</strong> It memoizes the result of a callback function and returns the memoized value, which can be a single value, an array, or an object. The memoized result can be passed to a child component through props and may help skip unnecessary re-renders if the child component is wrapped with React.memo.<br />
+    <strong>useCallback:</strong> It memoizes the function reference itself and returns the memoized function reference, not the result returned by the function. If the function reference is passed to a child component through props, the child component may skip unnecessary re-renders if it is wrapped with React.memo.</p>
+</body>
+</html>
