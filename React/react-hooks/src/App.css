@@ -116,3 +116,109 @@ input {
 	padding: 10px;
 	margin: 10px;
 }
+
+.employee-dashboard {
+	border-left: 1px solid #ddd;
+	position: relative;
+	padding: 0 12px;
+	flex: 4;
+}
+
+.employee-dashboard > h2 {
+	font-weight: bold;
+	font-size: 28px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.employee-dashboard .toggle-switch {
+	align-items: center;
+	position: absolute;
+	cursor: pointer;
+	display: flex;
+	right: 5px;
+	gap: 8px;
+	top: 5px;
+}
+
+.employee-dashboard input[type="text"] {
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	border-radius: 4px;
+	font-size: 16px;
+	padding: 5px;
+	height: 36px;
+	flex: 1
+}
+
+.employee-dashboard .search-bar {
+	display: flex;
+	gap: 12px;
+}
+
+.employee-dashboard select {
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	font-size: 16px;
+	padding: 5px;
+	height: 36px;
+	width: 180px;
+}
+
+.employee-dashboard .select-filters {
+	margin: 12px 0;
+	display: flex;
+	gap: 12px;
+}
+
+.employee-dashboard .select-filters select {
+	font-size: 14.5px;
+	flex: 1;
+}
+
+.employee-list {
+	margin-right: -15px;
+	padding-right: 15px;
+	overflow-y: auto;
+	height: 80dvh;
+}
+
+.employee-card {
+	border: 1px solid #eee;
+	position: relative;
+	border-radius: 4px;
+	margin: 10px 0;
+	padding: 10px;
+}
+
+.employee-card .flex {
+	justify-content: space-between;
+}
+
+.employee-card .flex .active {
+	background-color: rgb(52, 243, 52);
+	display: inline-block;
+	border-radius: 50%;
+	margin-right: 5px;
+	height: 12px;
+	width: 12px;
+}
+
+.employee-card .flex .inactive {
+	background-color: rgb(200, 200, 200);
+	display: inline-block;
+	border-radius: 50%;
+	margin-right: 5px;
+	height: 12px;
+	width: 12px;
+}
+
+.employee-card .action-buttons {
+	position: absolute;
+	display: flex;
+	bottom: 5px;
+	right: 5px;
+	gap: 5px;
+}
+
+

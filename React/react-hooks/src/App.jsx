@@ -23,6 +23,7 @@ import { UseCallback } from './day-14-15/UseCallback';
 import { UserDashboard } from './day14-mini-project/UserDashboard';
 import { ProductDashboard } from './day14-assignment/ProductDashboard';
 import { UseMemo } from './day-14-15/UseMemo';
+import { EmployeeDashboard } from './day15-project/EmployeeDashboard';
 
 function App() {
 	const [count, setCount] = useState(0);
@@ -113,6 +114,9 @@ function App() {
 						<ProductDashboard />
 					</>
 				) }
+
+				{/* UseCallback and UseMemo Project */}
+				<EmployeeDashboard />
 			</div>
     	</div>
   	)
