@@ -23,7 +23,42 @@
     What is BrowserRouter?
     BrowserRouter is a React Router component that enables client-side routing by using the browser's URL and History API. It provides routing context to its child components.
 
+    What is Routes?
+    Routes is a React Router component that contains route definitions and renders the route that best matches the current URL.
+
+    What is a Route?
+    Route is a React Router component that maps a URL path to the React element that should be rendered when the path matches the current URL.
+
+    What is the purpose of the 'path' and 'element' props?
+    The path prop defines the URL path that a route should match. The element prop defines the React element that should be rendered when the route matches.
+
+    What is Link?
+    Link is a React Router component used to navigate between routes without reloading the entire page.
+
+    What is the difference between < a > and < Link >?
+    A normal anchor element performs standard browser navigation and can reload the document, while Link performs client-side navigation and updates the route without a full page reload.
     
+    What is NavLink?
+    NavLink is a React Router component that navigates between routes and provides an active state when its destination matches the current URL.
+
+    Difference between Link and NavLink?
+    Both perform client-side navigation, but NavLink also provides active-state information, which is useful for styling the current active navigation link.
+
+    What is isActive?
+    isActive is a boolean value provided by NavLink that indicates whether the link's destination matches the current URL.
+
+    Why do we use end with the Navlink?
+    We use end with the NavLink so that the link is active only when the current URL exactly matches the to path of the NavLink.
+
+    What is Nested Routes?
+    Nested Routes are the routes that are defined inside another route to represent a parent-child URL and UI relationship.
+
+    What is Layout Route?
+    A Layout Route is a route that provides shared UI for its child routes and renders the child route content through an Outlet.
+
+    What is Outlet?
+    Outlet is a React Router component that renders the matching child route inside its parent route component.
+
 
 </body>
 </html>
