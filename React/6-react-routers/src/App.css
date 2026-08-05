@@ -20,6 +20,10 @@ nav ul li .inactive {
     color: #999;
 }
 
+nav ul li a:hover {
+    color: #333;
+}
+
 .inner-nav {
     width: 300px;
     justify-content: space-between;
@@ -53,10 +57,42 @@ nav ul li .inactive {
 
 .dashboard-layout aside nav .inactive-link {
     text-decoration: none;
-    color: #000;
+    color: #999;
+}
+
+.dashboard-layout aside nav .inactive-link:hover {
+    color: #444;
 }
 
 .dashboard-layout aside nav .active-link {
     font-weight: bold;
     text-decoration: underline;
+}
+
+footer {
+    background-color: #333333;
+    position: absolute;
+    text-align: center;
+    color: #ffffff;
+    padding: 12px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+
+.category {
+    background-color: darkblue;
+    border-radius: 4px;
+    display: inline-block;
+    margin: 4px 10px;
+    padding: 0 4px;
+    color: #fff;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-1 {
+    flex: 1;
 }

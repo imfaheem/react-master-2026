@@ -4,61 +4,231 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Day 17 and 18 - React Router</title>
+    <style>
+        h4 {
+            margin-bottom: 0;
+        }
+
+        p {
+            margin-top: 0;
+        }
+    </style>
 </head>
 <body>
+    <main>
+        <h1>Day 17 and 18 - React Router</h1>
 
-    What is React Router?
-    React Router is a library used to implement client-side routing in React applications. It matches URLs with React components and renders the appropriate component without a full page reload.
+        <section>
+            <h4>What is React Router?</h4>
+            <p>
+                React Router is a library used to implement client-side routing in React
+                applications. It matches URLs with React components and renders the
+                appropriate component without a full page reload.
+            </p>
+        </section>
 
-    Why we use React Router in React Application?
-    We use React Router in a React application to manage navigation between different pages based on the URL without reloading the entire application.
-    So, when navigating among multiple pages, React Router updates and renders the required page component instead of reloading the entire application.
-    
-    What is client-side routing?
-    Client-side routing is a technique in which navigation is handled in the browser. When the URL changes, React Router renders the matching component without requesting and loading a completely new HTML page from the server.
+        <section>
+            <h4>Why do we use React Router in a React application?</h4>
+            <p>
+                We use React Router in a React application to manage navigation between
+                different pages based on the URL without reloading the entire
+                application.<br />So, when navigating among multiple pages, React Router
+                updates and renders the required page component instead of reloading the
+                entire application.
+            </p>
+        </section>
 
-    Does React Router reload the entire page during navigation?
-    No. React Router updates the URL and renders the matching React component without performing a full browser page reload.
+        <section>
+            <h4>What is client-side routing?</h4>
+            <p>
+                Client-side routing is a technique in which navigation is handled in the
+                browser. When the URL changes, React Router renders the matching
+                component without requesting and loading a completely new HTML page from
+                the server.
+            </p>
+        </section>
 
-    What is BrowserRouter?
-    BrowserRouter is a React Router component that enables client-side routing by using the browser's URL and History API. It provides routing context to its child components.
+        <section>
+            <h4>Does React Router reload the entire page during navigation?</h4>
+            <p>
+                No. React Router updates the URL and renders the matching React component
+                without performing a full browser page reload.
+            </p>
+        </section>
 
-    What is Routes?
-    Routes is a React Router component that contains route definitions and renders the route that best matches the current URL.
+        <section>
+            <h4>What is BrowserRouter?</h4>
+            <p>
+                BrowserRouter is a React Router component that enables client-side
+                routing by using the browser's URL and History API. It provides routing
+                context to its child components.
+            </p>
+        </section>
 
-    What is a Route?
-    Route is a React Router component that maps a URL path to the React element that should be rendered when the path matches the current URL.
+        <section>
+            <h4>What is Routes?</h4>
+            <p>
+                Routes is a React Router component that contains route definitions and
+                renders the route that best matches the current URL.
+            </p>
+        </section>
 
-    What is the purpose of the 'path' and 'element' props?
-    The path prop defines the URL path that a route should match. The element prop defines the React element that should be rendered when the route matches.
+        <section>
+            <h4>What is a Route?</h4>
+            <p>
+                Route is a React Router component that maps a URL path to the React
+                element that should be rendered when the path matches the current URL.
+            </p>
+        </section>
 
-    What is Link?
-    Link is a React Router component used to navigate between routes without reloading the entire page.
+        <section>
+            <h4>What is the purpose of the 'path' and 'element' props?</h4>
+            <p>
+                The path prop defines the URL path that a route should match. The element
+                prop defines the React element that should be rendered when the route
+                matches.
+            </p>
+        </section>
 
-    What is the difference between < a > and < Link >?
-    A normal anchor element performs standard browser navigation and can reload the document, while Link performs client-side navigation and updates the route without a full page reload.
-    
-    What is NavLink?
-    NavLink is a React Router component that navigates between routes and provides an active state when its destination matches the current URL.
+        <section>
+            <h4>What is Link?</h4>
+            <p>
+                Link is a React Router component used to navigate between routes without
+                reloading the entire page.
+            </p>
+        </section>
 
-    Difference between Link and NavLink?
-    Both perform client-side navigation, but NavLink also provides active-state information, which is useful for styling the current active navigation link.
+        <section>
+            <h4>What is the difference between <code>&lt;a&gt;</code> and <code>Link</code>?</h4>
+            <p>
+                A normal anchor element performs standard browser navigation and can
+                reload the document, while Link performs client-side navigation and
+                updates the route without a full page reload.
+            </p>
+        </section>
 
-    What is isActive?
-    isActive is a boolean value provided by NavLink that indicates whether the link's destination matches the current URL.
+        <section>
+            <h4>What is NavLink?</h4>
+            <p>
+                NavLink is a React Router component that navigates between routes and
+                provides an active state when its destination matches the current URL.
+            </p>
+        </section>
 
-    Why do we use end with the Navlink?
-    We use end with the NavLink so that the link is active only when the current URL exactly matches the to path of the NavLink.
+        <section>
+            <h4>What is the difference between Link and NavLink?</h4>
+            <p>
+                Both perform client-side navigation, but NavLink also provides
+                active-state information, which is useful for styling the current active
+                navigation link.
+            </p>
+        </section>
 
-    What is Nested Routes?
-    Nested Routes are the routes that are defined inside another route to represent a parent-child URL and UI relationship.
+        <section>
+            <h4>What is isActive?</h4>
+            <p>
+                isActive is a boolean value provided by NavLink that indicates whether
+                the link's destination matches the current URL.
+            </p>
+        </section>
 
-    What is Layout Route?
-    A Layout Route is a route that provides shared UI for its child routes and renders the child route content through an Outlet.
+        <section>
+            <h4>Why do we use end with NavLink?</h4>
+            <p>
+                We use end with the NavLink so that the link is active only when the
+                current URL exactly matches the to path of the NavLink.
+            </p>
+        </section>
 
-    What is Outlet?
-    Outlet is a React Router component that renders the matching child route inside its parent route component.
+        <section>
+            <h4>What are Nested Routes?</h4>
+            <p>
+                Nested Routes are the routes that are defined inside another route to
+                represent a parent-child URL and UI relationship.
+            </p>
+        </section>
 
+        <section>
+            <h4>What is a Layout Route?</h4>
+            <p>
+                A Layout Route is a route that provides shared UI for its child routes
+                and renders the child route content through an Outlet.
+            </p>
+        </section>
 
+        <section>
+            <h4>What is Outlet?</h4>
+            <p>
+                Outlet is a React Router component that renders the matching child route
+                inside its parent route component.
+            </p>
+        </section>
+
+        <section>
+            <h4>What are Route Parameters?</h4>
+            <p>
+                Route Parameters are dynamic values in a URL that allow us to display
+                different content using the same route.
+            </p>
+        </section>
+
+        <section>
+            <h4>What is a Dynamic Route?</h4>
+            <p>
+                A Dynamic Route is a route that contains one or more route parameters
+                and can match different URL values using the same route definition.
+            </p>
+        </section>
+
+        <section>
+            <h4>What is useParams?</h4>
+            <p>
+                useParams is a React Router Hook that returns an object containing the
+                dynamic route parameters from the current URL.
+            </p>
+        </section>
+
+        <section>
+            <h4>What are Multiple Route Parameters?</h4>
+            <p>
+                Multiple Route Parameters are two or more dynamic values defined in the
+                same route path.
+            </p>
+        </section>
+
+        <section>
+            <h4>What is an Optional Route Parameter?</h4>
+            <p>
+                An Optional Route Parameter is a route parameter that may be present or
+                absent in the URL.
+            </p>
+        </section>
+
+        <section>
+            <h4>What is a Search Param?</h4>
+            <p>
+                A Search Param is a key-value pair written in the URL after the
+                question mark (?).<br />Search Params are key-value pairs added after
+                the ? symbol in a URL. They are commonly used to store search, filter,
+                sorting, and pagination values in the URL.
+            </p>
+        </section>
+
+        <section>
+            <h4>Why do we use Search Params?</h4>
+            <p>
+                We use Search Params to store information in the URL without changing
+                the route path.
+            </p>
+        </section>
+
+        <section>
+            <h4>What is useSearchParams hook?</h4>
+            <p>
+                useSearchParams() is a React Router Hook that allows us to read and
+                update the search parameters in the URL.
+            </p>
+        </section>
+    </main>
 </body>
 </html>

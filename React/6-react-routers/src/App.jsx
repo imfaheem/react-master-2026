@@ -11,6 +11,11 @@ import { Settings } from './pages/dashboard/Settings';
 import { Projects } from './pages/dashboard/Projects';
 import { DashboardHome } from './pages/dashboard/DashboardHome';
 import { Team } from './pages/dashboard/Team';
+import { Products } from './pages/products/Products';
+import { ProductsDetails } from './pages/products/ProductsDetails';
+import { ProductPosts } from './pages/products/ProductPosts';
+import { Posts } from './pages/Posts';
+import { NewProduct } from './pages/products/NewProduct';
 
 function App() {
     return (
@@ -26,6 +31,11 @@ function App() {
 					<Route path='projects' element={<Projects />} />
 					<Route path='team' element={<Team />} />
 				</Route>
+				<Route path='/products' element={<Products />} />
+				<Route path='/products/:productId' element={<ProductsDetails />} />
+				<Route path='/products/:productId/posts/:postId' element={<ProductPosts />} />
+				<Route path='/new-products' element={<NewProduct />} />
+				<Route path='/posts' element={<Posts />} />
 				<Route path='/contact' element={<Contact />} />
 			</Route>			
 		</Routes>
