@@ -10,8 +10,6 @@ export const DashboardSidebar = () => {
                 <NavLink to="/dashboard" end className={getIsActiveClass}>Dashboard</NavLink>
                 <NavLink to="profile" className={getIsActiveClass}>Profile</NavLink>
                 <NavLink to="settings" className={getIsActiveClass}>Settings</NavLink>
-                <NavLink to="projects" className={getIsActiveClass}>Projects</NavLink>
-                <NavLink to="team" className={getIsActiveClass}>Team</NavLink>
             </nav>
         </aside>
     )

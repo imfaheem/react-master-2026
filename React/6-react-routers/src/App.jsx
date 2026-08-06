@@ -1,44 +1,38 @@
 import './App.css';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import { AppLayout } from './layouts/AppLayout';
-import { Routes, Route } from 'react-router-dom';
 import { Home } from './pages/Home';
 import { About } from './pages/About';
-import { Services } from './pages/Services';
-import { Contact } from './pages/Contact';
+import { Products } from './pages/Products';
+import { ProductDetails } from './pages/ProductDetails';
 import { DashboardLayout } from './layouts/DashboardLayout';
+import { DashboardHome } from './pages/dashboard/DashboardHome';
 import { Profile } from './pages/dashboard/Profile';
 import { Settings } from './pages/dashboard/Settings';
-import { Projects } from './pages/dashboard/Projects';
-import { DashboardHome } from './pages/dashboard/DashboardHome';
-import { Team } from './pages/dashboard/Team';
-import { Products } from './pages/products/Products';
-import { ProductsDetails } from './pages/products/ProductsDetails';
-import { ProductPosts } from './pages/products/ProductPosts';
-import { Posts } from './pages/Posts';
-import { NewProduct } from './pages/products/NewProduct';
+import { NotFound } from './pages/NotFound';
+import { AppContext } from './context/AppContext';
 
 function App() {
-    return (
-		<Routes>
-			<Route element={<AppLayout />}>
-				<Route path='/' element={<Home />} />
-				<Route path='/about' element={<About />} />
-				<Route path='/services' element={<Services />} />
-				<Route path='/dashboard' element={<DashboardLayout />}>
-					<Route index element={<DashboardHome />} />
-					<Route path='profile' element={<Profile />} />
-					<Route path='settings' element={<Settings />} />
-					<Route path='projects' element={<Projects />} />
-					<Route path='team' element={<Team />} />
-				</Route>
-				<Route path='/products' element={<Products />} />
-				<Route path='/products/:productId' element={<ProductsDetails />} />
-				<Route path='/products/:productId/posts/:postId' element={<ProductPosts />} />
-				<Route path='/new-products' element={<NewProduct />} />
-				<Route path='/posts' element={<Posts />} />
-				<Route path='/contact' element={<Contact />} />
-			</Route>			
-		</Routes>
+	const location = useLocation();
+	const pathname = location.pathname;
+
+	return (
+		<AppContext.Provider value={{pathname}}>
+			<Routes>
+				<Route element={<AppLayout />}>
+					<Route path='/' element={<Home />} />
+					<Route path='/about' element={<About />} />
+					<Route path='/products' element={<Products />} />
+					<Route path='/products/:productId' element={<ProductDetails />} />
+					<Route path='/dashboard' element={<DashboardLayout />}>
+						<Route index element={<DashboardHome />} />
+						<Route path='profile' element={<Profile />} />
+						<Route path='settings' element={<Settings />} />
+					</Route>
+					<Route path='*' element={<NotFound />} />
+				</Route>			
+			</Routes>
+		</AppContext.Provider>
     )
 }
 

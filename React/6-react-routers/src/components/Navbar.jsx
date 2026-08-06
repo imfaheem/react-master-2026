@@ -13,16 +13,10 @@ export const Navbar = () => {
                     <NavLink to="/about" className={getIsActiveStyles}>About</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/services" className={getIsActiveStyles}>Services</NavLink>
-                </li>
-                <li>
-                    <NavLink to="/dashboard" className={getIsActiveStyles}>Dashboard</NavLink>
-                </li>
-                <li>
                     <NavLink to="/products" className={getIsActiveStyles}>Products</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/contact" className={getIsActiveStyles}>Contact Us</NavLink>
+                    <NavLink to="/dashboard" className={getIsActiveStyles}>Dashboard</NavLink>
                 </li>
             </ul>
         </nav>
