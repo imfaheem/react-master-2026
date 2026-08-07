@@ -10,7 +10,7 @@ export const Products = () => {
     const search = searchParams.get("title") || "";
     const category = searchParams.get("category") || "";
 
-    const filterProducts = useMemo(()=> products.filter(product => {
+    const filteredProducts = useMemo(()=> products.filter(product => {
         const searchedProducts = product.title.toLowerCase().includes(search.toLowerCase().trim());
         const searchedCategory = category === "" || category === "All" ? true : product.category === category;
         return searchedProducts && searchedCategory;
@@ -38,9 +38,13 @@ export const Products = () => {
                 <CategoryFilter category={category ?? "All"} handleCategoryChange={handleCategoryChange} />
             </div>
             <div className="products-flex">
-                {filterProducts.map(product => (
-                    <ProductCard key={product.id} product={product} />
-                ))}
+                {filteredProducts.length > 0 ?
+                    filteredProducts.map(product => (
+                        <ProductCard key={product.id} product={product} />
+                    )) : (
+                        <h1>No Product Found.</h1>
+                    )
+                }
             </div>
         </div>
     )

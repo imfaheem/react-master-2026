@@ -16,7 +16,7 @@ export const ProductCard = ({ product }) => {
                     <small className="category" style={{backgroundColor: categoryColor }}>{product.category}</small>
                 </p>
             </div>
-            <Link to={`/products/${product.id}?`}>View Details</Link>
+            <Link to={`/products/${product.id}`}>View Details</Link>
         </section>
     )
 }
