@@ -1,0 +1,51 @@
+.navbar {
+	justify-content: space-around;
+	display: flex;
+}
+
+.navbar .active-link {
+	text-decoration: underline;
+	color: #000000;
+}
+
+.navbar .inactive-link {
+	text-decoration: none;
+	color: #999999;
+}
+
+.back-to-home {
+	position: absolute;
+	bottom: 50px;
+	right: 50px;
+}
+
+form p {
+	margin: 5px;
+}
+
+form p input,
+form p select,
+form div select {
+	display: block;
+	padding: 5px;
+	width: 300px;
+}
+
+form p textarea {
+	height: 80px;
+	width: 300px;
+}
+
+form small {
+	color: red;
+}
+
+.submitted {
+	border: 1px solid green;
+	background-color: lightgreen;
+	border-radius: 5px;
+	padding: 10px;
+	font-size: 18px;
+	font-weight: bold;
+	margin: 20px 0;
+}
