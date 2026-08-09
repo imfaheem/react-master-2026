@@ -56,9 +56,9 @@ body {
 
 #root {
   display: flex;
-  padding: 0 10px;
   max-width: 100%;
   min-height: 100svh;
+  padding: 5px 10px;
   flex-direction: column;
 }
 

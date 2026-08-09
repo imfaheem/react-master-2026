@@ -1,0 +1,68 @@
+.productCard {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    width: 300px;
+}
+
+.productCard:hover {
+    box-shadow: 0 0 2px 2px #ddd;
+    cursor: pointer;
+    border: none;
+}
+
+.productCard h3 {
+    text-align: center;
+}
+
+.productCard .imgDiv img {
+    margin: 0 auto;
+    display: block;
+    height: 200px;
+    width: auto;
+}
+
+.productCard a {
+    text-decoration: none;
+    text-align: center;
+    display: block;
+}
+
+.productCard a:hover {
+    text-decoration: underline;
+}
+
+.productCard .flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.productCard .flex p {
+    font-size: 20px;
+}
+
+.productCard .flex p small {
+    font-size: 14px;
+}
+
+.productCard .flex .price {
+    color: #4d4d4d;
+}
+
+.productCard .flex .prodSize {
+    font-size: 24px;
+}
+
+:global(.category),
+.category {
+    display: inline-block;
+    border-radius: 4px;
+    margin: 4px 10px;
+    padding: 0 4px;
+    color: #fff;
+}
+
+.categoryStyle {
+    font-weight: bold;
+}

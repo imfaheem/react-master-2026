@@ -1,0 +1,35 @@
+.dashboardLayout {
+    display: flex;
+    gap: 12px;
+}
+
+.dashboardLayout > aside {
+    border-right: 1px solid #ddd;
+    padding: 20px;
+    height: 80dvh;
+    width: 300px;
+}
+
+.dashboardLayout > main {
+    flex: 1;
+}
+
+.dashboardLayout aside nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.dashboardLayout aside nav .inactive-link {
+    text-decoration: none;
+    color: #999;
+}
+
+.dashboardLayout aside nav .inactive-link:hover {
+    color: #444;
+}
+
+.dashboardLayout aside nav .active-link {
+    font-weight: bold;
+    text-decoration: underline;
+}

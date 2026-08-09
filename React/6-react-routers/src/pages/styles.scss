@@ -1,0 +1,42 @@
+$primary: #990088;
+$secondary: #88990a;
+
+@mixin feature_heading {
+    background-color: $primary;
+    padding: 0 12px;
+    color: #ffffff;
+}
+
+.product-details {
+    border: 1px solid #999;
+    max-width: 960px;
+    margin: 0 auto;
+    .img-div {
+        width: 100%;
+        img {
+            width: auto;
+            height: 500px;
+        }
+    }
+
+    .details {
+        font-size: 28px;
+        font-weight: 300;
+        padding: 5px 20px;
+        .flex {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .category {
+            padding: 8px 16px;
+        }
+        h2 {
+            font-size: 48px;
+            @include feature_heading();
+        }
+        code {
+            font-size: 20px;
+        }
+    }
+}
