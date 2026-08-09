@@ -1,10 +1,11 @@
-import { NavLink } from "react-router-dom"
+import styles from "./Navbar.module.css";
+import { NavLink } from "react-router-dom";
 
 export const Navbar = () => {
-    const getIsActiveStyles = ({ isActive }) => isActive ? 'active' : 'inactive';
+    const getIsActiveStyles = ({ isActive }) => isActive ? styles.active : styles.inactive;
 
     return (
-        <nav>
+        <nav className={styles.navbar}>
             <ul>
                 <li>
                     <NavLink to="/" className={getIsActiveStyles} end>Home</NavLink>

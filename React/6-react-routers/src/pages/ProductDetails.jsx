@@ -2,6 +2,7 @@ import { useNavigate, useParams } from "react-router-dom"
 import { products } from "../data/products";
 import { NotFound } from "./NotFound";
 import { CATEGORY_TYPES } from "../utils/utils";
+import "./styles.scss";
 
 export const ProductDetails = () => {
     const navigate = useNavigate();
