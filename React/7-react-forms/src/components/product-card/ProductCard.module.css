@@ -1,0 +1,70 @@
+/* ========== CSS Module ========= */
+
+.title {
+    font-size: 32px;
+}
+
+.productCard {
+    transition: 0.3s all ease-in-out;
+    border: 1px solid #ddd;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    width: 960px;
+}
+
+.productCardImage {
+    transition: 0.3s all ease-in-out;
+    height: auto;
+    width: 300px;
+}
+
+.productCard:hover .productCardImage {
+    zoom: 1.1;
+}
+
+.productCardTitle {
+    text-align: center;
+    font-weight: bold;
+    color: #0089ff;
+    margin: 20px 0;
+}
+
+.productCardDescription {
+    font-size: 21px;
+}
+
+.productCardPrice {
+    background-color: #ddd;
+    text-align: right;
+    padding: 5px 10px;
+    margin-right: auto;
+}
+
+@media screen and (max-width: 991px) {
+    .productCard {
+        width: 100%;
+    }
+    .productCardImage {
+        width: 200px;
+    }
+
+    .productCardDescription {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .productCardImage {
+        width: 100%;
+    }
+
+    .productCardTitle {
+        font-size: 18px;
+    }
+
+    .productCardDescription {
+        font-size: 16px;
+    }
+}

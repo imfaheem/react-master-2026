@@ -1,0 +1,70 @@
+/* ========== SCSS Styles ========= */
+
+/* ----- CSS Variables ----- */
+$primary: #2563eb;
+$secondary: #0d9488;
+$success: #16a34a;
+$danger: #dc2626;
+
+$defaultBg: #dedede;
+
+$small-size : 12px;
+$medium-size: $small-size + 4px;
+$large-size: $small-size + 8px;
+
+/* ----- @Mixin ----- */
+@mixin primary-styles {
+    background-color: $defaultBg;
+    font-size: $medium-size;
+    color: $primary;
+}
+
+/* ----- User Card Styling ----- */
+.user-card {
+    border: 1px solid $defaultBg;
+    border-radius: 5px;
+    width: 380px;
+    .user-card-avatar-wrapper {
+        border-radius: 5px;
+        overflow: hidden;
+        img {
+            transition: filter 0.3s ease-in-out;
+            filter: grayscale(100%);
+            width: 100%;
+            &:hover {
+                filter: grayscale(0%);
+                cursor: pointer;
+            }
+        }
+    }
+
+    .user-card-content {
+        padding: 8px 12px;
+        .user-card-role {
+            @include primary-styles();
+            padding: 5px;
+        }
+        .user-card-name {
+            color: $secondary;
+        }
+        .user-card-email {
+            color: $primary;
+        }
+        .user-card-bio {
+            font-size: $small-size;
+        }
+    }
+
+    .user-card-location {
+        display: flex;
+        padding: 10px 0;
+        justify-content: space-between;
+        .user-card-location-icon {
+            color: $danger;
+        }
+        .user-card-location-text {
+            color: $success;
+        }
+    }
+
+}

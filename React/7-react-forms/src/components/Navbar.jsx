@@ -14,6 +14,9 @@ export const Navbar = () => {
             <NavLink to="form-hook/project" className={getActiveClass}>
                 Form Hook Project
             </NavLink>
+            <NavLink to="css-styles" className={getActiveClass}>
+                CSS Styling Project
+            </NavLink>
         </nav>
     )
 }
