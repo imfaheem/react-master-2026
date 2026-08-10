@@ -12,7 +12,7 @@ export const AppLayout = () => {
                 <Outlet />
             </main>
             {pathname !== "/" && (
-                <button className="back-to-home" onClick={()=> navigate("/")}>
+                <button className="back-to-home hidden" onClick={()=> navigate("/")}>
                     Back to Home - Form Hook
                 </button>
             )}

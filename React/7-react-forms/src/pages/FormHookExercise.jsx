@@ -19,9 +19,8 @@ export const FormHookExercise = () => {
     }
 
     return (
-        <div>
+        <div className="m-4">
             <h2>FormHook Exercise</h2>
-            <br />
             <form onSubmit={handleSubmit(onSubmit)}>
                 <p>
                     <input
@@ -46,13 +45,14 @@ export const FormHookExercise = () => {
                                     value={field.value}
                                     onChange={field.onChange}
                                     options={countries}
+                                    className="border rounded-md py-2 px-4 w-80 cursor-pointer"
                                 />
                                 {fieldState.error && <small>{fieldState.error.message}</small>}
                             </>
                         )}
                     />
                 </p>
-                <button>Submit</button>
+                <button type="submit" className="bg-sky-500 mt-2 text-white px-2 py-1 rounded-md w-20">Submit</button>
             </form>
         </div>
     )
