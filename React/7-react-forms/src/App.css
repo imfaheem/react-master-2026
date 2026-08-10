@@ -19,33 +19,3 @@
 	right: 50px;
 }
 
-form p {
-	margin: 5px;
-}
-
-form p input,
-form p select,
-form div select {
-	display: block;
-	padding: 5px;
-	width: 300px;
-}
-
-form p textarea {
-	height: 80px;
-	width: 300px;
-}
-
-form small {
-	color: red;
-}
-
-.submitted {
-	border: 1px solid green;
-	background-color: lightgreen;
-	border-radius: 5px;
-	padding: 10px;
-	font-size: 18px;
-	font-weight: bold;
-	margin: 20px 0;
-}

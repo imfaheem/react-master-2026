@@ -4,33 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Day 22 - 23: CSS Styling</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        h4 {
+            margin-bottom: 0;
+        }
+        p {
+            margin-top: 0;
+        }
+    </style>
 </head>
 <body>
 
-    What are CSS Modules?
-    CSS Modules are a CSS styling approach in which CSS class names are locally scoped to a component. 
-    They prevent global class-name conflicts by generating unique class names during the build process.
+    <h4>What are CSS Modules?</h4>
+    <p>CSS Modules are a CSS styling approach in which CSS class names are locally scoped to a component. They prevent global class-name conflicts by generating unique class names during the build process.</p>
 
-    What is SCSS?
-    SCSS is a CSS preprocessor syntax that extends CSS with features such as variables, nesting, mixins, functions, and reusable styles.
+    <h4>What is SCSS?</h4>
+    <p>SCSS is a CSS preprocessor syntax that extends CSS with features such as variables, nesting, mixins, functions, and reusable styles.</p>
 
-    Difference between SCSS vs CSS Modules?
-    SCSS enhances CSS syntax and provides features for maintainability, while CSS Modules provide local scoping for CSS classes. They can also be used together.
-    
-    What is a mixin?
-    A mixin is a reusable block of SCSS styles that can optionally accept parameters.
+    <h4>Difference between SCSS vs CSS Modules?</h4>
+    <p>SCSS enhances CSS syntax and provides features for maintainability, while CSS Modules provide local scoping for CSS classes. They can also be used together.</p>
 
-    What is @extend?
-    @extend allows one selector to share styles with another selector by combining selectors in the generated CSS.
+    <h4>What is a mixin?</h4>
+    <p>A mixin is a reusable block of SCSS styles that can optionally accept parameters.</p>
 
-    What is Styled Components in React?
-    Styled Components is a CSS-in-JS library that allows us to create styled React components using tagged template literals.
-    It generates unique class names for styled components, helping avoid traditional global class-name conflicts.
+    <h4>What is @extend?</h4>
+    <p>@extend allows one selector to share styles with another selector by combining selectors in the generated CSS.</p>
 
-    What is CSS-in-JS?
-    CSS-in-JS is a styling approach where CSS styles are defined and managed using JavaScript or TypeScript, often through a dedicated library.
+    <h4>What is Styled Components in React?</h4>
+    <p>Styled Components is a CSS-in-JS library that allows us to create styled React components using tagged template literals. It generates unique class names for styled components, helping avoid traditional global class-name conflicts.</p>
 
-    
+    <h4>What is CSS-in-JS?</h4>
+    <p>CSS-in-JS is a styling approach where CSS styles are defined and managed using JavaScript or TypeScript, often through a dedicated library.</p>
 
+    <h4>What is Tailwind CSS?</h4>
+    <p>Tailwind CSS is a utility-first CSS framework that provides low-level utility classes for building custom user interfaces directly in markup.</p>
+
+    <h4>What does utility-first mean?</h4>
+    <p>Instead of creating custom CSS classes for every component, we compose small utility classes such as flex, p-4, text-center, and bg-blue-600 to build.</p>
+
+    <h4>What is mobile-first design?</h4>
+    <p>Mobile-first design means we start with styles for smaller screens and progressively enhance the layout for larger screens using responsive breakpoints.</p>
+
+    <h4>How does Tailwind handle responsive design?</h4>
+    <p>Tailwind uses responsive prefixes such as sm:, md:, lg:, xl:, and 2xl: to apply utilities at specific minimum viewport widths.</p>
 </body>
 </html>
