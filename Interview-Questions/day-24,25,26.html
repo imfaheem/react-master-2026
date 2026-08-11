@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 24, 25, 26 - Axios</title>
+</head>
+<body>
+
+    What is Axios?
+    Axios is an open-source HTTP client library for JavaScript. It is used to connect the frontend application with the backend/API to perform HTTP requests.
+    Such as GET, POST, PUT, PATCH, and DELETE.
+
+    HTTP Methods:
+    <strong>GET:</strong> Retrieves data from a server without altering the server state.
+    <strong>POST:</strong> Sends data to a server to create a new resource or entry in the database.
+    <strong>PUT:</strong> Completely replaces an existing resource on the server with a new payload.
+    <strong>PATCH:</strong> Applies partial updates to an existing resource, modifying only the specified fields.
+    <strong>DELETE:</strong> Removes a specified resource or entry from the server.
+    
+    Difference between PUT and PATCH?
+    PUT is used to completely replace an existing resource on the server, requiring you to send the full updated payload of data. Whereas PATCH is used for partial updates, allowing you to send only the specific fields you want to modify. <br />
+    In practice, omitting a field in a PUT request can cause that missing data to be overwritten or wiped on the server, while a PATCH request leaves all unmentioned fields untouched—making PATCH ideal for lightweight, targeted edits. <vr />
+    PUT best suited for complete resource replacements or resets.
+
+    Difference between fetch() and axios()?
+    <ul>
+        <li>fetch is a native browser API, while axios is an external library that requires installation.</li>
+        <li>fetch requires an extra manual step for data parsing from JSON. i.e. await res.json(). While axios automatically parses JSON responses. i.e. response.data</li>
+        <li>fetch does not reject on 404 or 500 errors unless checked manually via res.ok. While axios automatically rejects promises on HTTP error status codes (4xx and 5xx) and jumps to .catch()</li>
+        <li>axios supports built-in request/response interceptors (ideal for attached JWT tokens), upload/download progress tracking, and request cancellation out-of-the-box.</li>
+    </ul>
+
+    What is API Layer?
+    API Layer is a separate part of an application responsible for handling communication with backend APIs, including making requests, processing responses, and handling API-related errors, so that API logic remains separate from UI components.
+
+    What are Environment variables?
+    Environment variables are configuration values stored outside the application code that allow different settings, such as API URLs, to be used for different environments without changing the source code.
+
+    
+
+</body>
+</html>

@@ -1,4 +1,5 @@
 import './App.css';
+import { AxiosComp } from './components/AxiosComp';
 import { Users } from './components/Users';
 
 function App() {
@@ -6,7 +7,10 @@ function App() {
 	return (
 		<div className='main-class'>
 			<h1 className='text-center'>Data Fetching</h1>
-			<Users />
+			<div className='flex gap-4'>
+				<Users />
+				<AxiosComp />
+			</div>
 		</div>
 	)
 }
