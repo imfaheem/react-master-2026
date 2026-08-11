@@ -1,0 +1,37 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Ali Khan",
+      "department": "Frontend",
+      "salary": 180000,
+      "experience": 4,
+      "status": "Active"
+    },
+    {
+      "name": "M. Faheem Sikandar",
+      "department": "Backend Engineering",
+      "salary": 130000,
+      "experience": 4,
+      "status": "Active",
+      "id": "2"
+    },
+    {
+      "id": "3",
+      "name": "Awais Ahmed",
+      "department": "Backend",
+      "salary": 100,
+      "experience": 1,
+      "status": "Inactive"
+    },
+    {
+      "name": "Awais Ahmed",
+      "department": "Backend",
+      "salary": 95000,
+      "experience": 2,
+      "status": "Inactive",
+      "id": "6rGidcpypls"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

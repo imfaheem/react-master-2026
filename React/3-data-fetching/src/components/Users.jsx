@@ -57,7 +57,7 @@ export const Users = () => {
 
     return (
         <UsersContext.Provider value={{users, searchTerm}}>
-            <div className="m-10 flex">
+            <div className="m-10 flex flex-1">
                 <UserCard />
                 <UserSearch handleSearchInput={handleSearchInput} />
             </div>
