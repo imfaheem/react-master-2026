@@ -1,11 +1,14 @@
-import './App.css'
 import { Routes, Route } from 'react-router-dom'
+
 import { AppLayout } from './layouts/AppLayout'
+
+import { DeleteOperation } from './pages/DeleteOperation'
 import { GetOperation } from './pages/GetOperation'
+import { PatchOperation } from './pages/PatchOperation'
 import { PostOperation } from './pages/PostOperation'
 import { PutOperation } from './pages/PutOperation'
-import { PatchOperation } from './pages/PatchOperation'
-import { DeleteOperation } from './pages/DeleteOperation'
+
+import './App.css'
 
 function App() {
   
@@ -22,4 +25,4 @@ function App() {
 	)
 }
 
-export default App
+export default App;
