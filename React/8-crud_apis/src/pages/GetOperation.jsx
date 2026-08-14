@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import { RiLoader4Fill } from "react-icons/ri";
 import { VscErrorCompact } from "react-icons/vsc";
@@ -8,10 +9,13 @@ import Alert from "../ui/Alert";
 import Button from "../ui/Button";
 import InputField from "../ui/InputField";
 import { ProductCard } from "../components/ProductCard";
+import { ProductList } from "../components/ProductList";
 
 import { getProduct, getProducts } from "../services/productApi";
 
 export const GetOperation = () => {
+    const navigate = useNavigate();
+
     const [product, setProduct] = useState(null);
     const [productId, setProductId] = useState("");
     const [products, setProducts] = useState([]);
@@ -49,30 +53,34 @@ export const GetOperation = () => {
         }
     }
 
+    const handleProductDelete = useCallback((id) => {
+        navigate(`delete?id=${id}`);
+    }, [navigate])
+
     return (
         <>
             <h1 className="text-center uppercase !text-4xl !font-bold m-0">Get Operations</h1>
             <div className="flex px-4">
-                <div className="border-r px-2 w-96">
+                <div className="border-r px-2 w-60">
                     <h2 className="text-center">Search Product(s)</h2>
                     <InputField
                         type="number"
                         value={productId}
                         label="Search Product ID:"
-                        className="w-40"
+                        className="w-full"
                         onChange={(e) => setProductId(e.target.value)}
                     />
-                    <div className="my-4">
-                        <Button variant="get" className="mr-2" onClick={()=> handleProductSearch(productId)}>
+                    <div className="my-4 flex flex-col">
+                        <Button variant="get" className="mt-2" onClick={()=> handleProductSearch(productId)}>
                             Enter Product ID
                         </Button>
-                        <Button variant="all" className="ml-2" onClick={handleAllProducts}>Search All Products</Button>
+                        <Button variant="all" className="mt-2" onClick={handleAllProducts}>Search All Products</Button>
                     </div>
                 </div>
-                <div className="flex-1 px-2">
+                <div className="flex-1">
                     <h2 className="text-center">View Product(s)</h2>
-                    <div className="flex gap-2">
-                        <section className="flex-1 h-[calc(100dvh-230px)]">
+                    <div className="flex">
+                        <section className="flex-1 overflow-y-auto h-[calc(100dvh-230px)]">
                             {error === "product" ? (
                                 <div className="flex justify-center items-center h-full">
                                     <Alert variant="error" className="h-fit w-full">
@@ -92,6 +100,8 @@ export const GetOperation = () => {
                                     title={product.title}
                                     image={product.thumbnail}
                                     description={product.description}
+                                    brand={product.brand}
+                                    stock={product.stock}
                                     price={product.price}
                                     rating={product.rating}
                                 />
@@ -104,7 +114,7 @@ export const GetOperation = () => {
                                 </div>
                             )}
                         </section>
-                        <section className="border-l flex-1 px-2 overflow-y-auto h-[calc(100dvh-230px)]">
+                        <section className="border-l flex-1 overflow-y-auto h-[calc(100dvh-230px)]">
                             {error === "products" ? (
                                 <div className="flex justify-center items-center h-full">
                                     <Alert variant="error" className="h-fit w-full">
@@ -121,9 +131,11 @@ export const GetOperation = () => {
                                 </div>
                             ) : products.length ? (
                                 products.map(product => (
-                                    <div key={product.id}>
-                                        <p>{product.id}. {product.title}</p>
-                                    </div>
+                                    <ProductList
+                                        key={product.id}
+                                        product={product}
+                                        handleProductDelete={handleProductDelete}
+                                    />
                                 ))
                             ) : (
                                 <div className="flex justify-center items-center h-full">

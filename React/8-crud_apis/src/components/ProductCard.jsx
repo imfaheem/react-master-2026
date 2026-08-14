@@ -1,12 +1,16 @@
-export const ProductCard = ({
+import React from "react";
+
+export const ProductCard = React.memo(({
     title,
     image,
     description,
+    brand,
+    stock,
     price,
     rating,
 }) => {
     return (
-        <div className="border border-gray-200 rounded-md">
+        <div className="border border-gray-200 mx-2 rounded-md">
             <div className="bg-gray-100">
                 <img
                     src={image}
@@ -17,9 +21,13 @@ export const ProductCard = ({
             <p className="font-bold text-center py-2">{title}</p>
             <p className="text-sm text-justify p-2">{description}</p>
             <div className="flex justify-between p-2 font-medium">
+                <p>Brand: <strong className="text-xl text-gray-900">{brand}</strong></p>
+                <p>Stock:  <strong className="text-xl text-gray-900">{stock}</strong></p>
+            </div>
+            <div className="flex justify-between p-2 font-medium">
                 <p>Price: <strong className="text-xl text-gray-900">${price}</strong></p>
                 <p>Rating:  <strong className="text-xl text-gray-900">{rating}</strong></p>
             </div>
         </div>
     )
-}
+})

@@ -17,7 +17,7 @@ function App() {
 			<Route element={<AppLayout />}>
 				<Route path="/" element={<GetOperation />} />
 				<Route path="post" element={<PostOperation />} />
-				<Route path="put" element={<PutOperation />} />
+				<Route path="put/:productId" element={<PutOperation />} />
 				<Route path="patch" element={<PatchOperation />} />
 				<Route path="delete" element={<DeleteOperation />} />
 			</Route>
