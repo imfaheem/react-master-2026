@@ -5,7 +5,6 @@ const Button = ({
     size = "",
     onClick,
 }) => {
-    
     const variants = {
         all: "bg-slate-100 text-slate-700 border border-slate-300 hover:bg-slate-700 hover:text-white",
         get: "bg-sky-100 text-sky-700 border border-sky-200 hover:bg-sky-600 hover:text-white",
@@ -20,7 +19,6 @@ const Button = ({
         md: "text-lg",
         lg: "text-xl"
     }
-
     return (
         <button
             className={`transition-all duration-300 cursor-pointer rounded-md px-2 py-1 ${className} ${variants[variant]} ${sizes[size]}`}

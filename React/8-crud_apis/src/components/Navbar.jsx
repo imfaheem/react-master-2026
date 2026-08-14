@@ -1,10 +1,9 @@
-import { NavLink } from "react-router-dom"
+import { NavLink } from "react-router-dom";
 import { FaDatabase } from "react-icons/fa6";
 
 export const Navbar = () => {
     const getIsActiveStyles = ({ isActive }) => 
         isActive ? "bg-neutral-900 text-white" : "bg-neutral-700 text-gray-300 hover:bg-neutral-900 hover:text-white ";
-
     return (
         <nav className="p-4 bg-zinc-800">
             <div className="container mx-auto flex items-center justify-between">
