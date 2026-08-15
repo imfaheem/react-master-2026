@@ -4,6 +4,7 @@ const Button = ({
     variant = "get",
     size = "",
     onClick,
+    ...props
 }) => {
     const variants = {
         all: "bg-slate-100 text-slate-700 border border-slate-300 hover:bg-slate-700 hover:text-white",
@@ -23,6 +24,7 @@ const Button = ({
         <button
             className={`transition-all duration-300 cursor-pointer rounded-md px-2 py-1 ${className} ${variants[variant]} ${sizes[size]}`}
             onClick={onClick}
+            {...props}
         >
             {children}
         </button>

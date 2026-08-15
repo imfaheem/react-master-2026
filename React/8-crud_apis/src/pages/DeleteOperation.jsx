@@ -46,7 +46,9 @@ export const DeleteOperation = () => {
         setLoading("deleting");
 
         try {
-            const response = await deleteProduct(productId);
+            const accessToken = localStorage.getItem("accessToken");
+
+            const response = await deleteProduct(productId, accessToken);
             setDeletedProduct(response);
             setSuccess(true);
             setTimeout(() => {

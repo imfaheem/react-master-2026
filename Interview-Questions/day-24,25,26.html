@@ -4,40 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Day 24, 25, 26 - Axios</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        h4 { margin-bottom: 0; }
+        p { margin-top: 0; }
+    </style>
 </head>
 <body>
 
-    What is Axios?
-    Axios is an open-source HTTP client library for JavaScript. It is used to connect the frontend application with the backend/API to perform HTTP requests.
-    Such as GET, POST, PUT, PATCH, and DELETE.
+    <h4>What is Axios?</h4>
+    <p>Axios is an open-source HTTP client library for JavaScript. It is used to connect the frontend application with the backend/API to perform HTTP requests.<br />
+    Such as GET, POST, PUT, PATCH, and DELETE.</p>
 
-    HTTP Methods:
-    <strong>GET:</strong> Retrieves data from a server without altering the server state.
-    <strong>POST:</strong> Sends data to a server to create a new resource or entry in the database.
-    <strong>PUT:</strong> Completely replaces an existing resource on the server with a new payload.
-    <strong>PATCH:</strong> Applies partial updates to an existing resource, modifying only the specified fields.
-    <strong>DELETE:</strong> Removes a specified resource or entry from the server.
+    <h4>HTTP Methods:</h4>
+    <p><strong>GET:</strong> Retrieves data from a server without altering the server state.<br />
+    <strong>POST:</strong> Sends data to a server to create a new resource or entry in the database.<br />
+    <strong>PUT:</strong> Completely replaces an existing resource on the server with a new payload.<br />
+    <strong>PATCH:</strong> Applies partial updates to an existing resource, modifying only the specified fields.<br />
+    <strong>DELETE:</strong> Removes a specified resource or entry from the server.</p>
     
-    Difference between PUT and PATCH?
-    PUT is used to completely replace an existing resource on the server, requiring you to send the full updated payload of data. Whereas PATCH is used for partial updates, allowing you to send only the specific fields you want to modify. <br />
-    In practice, omitting a field in a PUT request can cause that missing data to be overwritten or wiped on the server, while a PATCH request leaves all unmentioned fields untouched—making PATCH ideal for lightweight, targeted edits. <vr />
-    PUT best suited for complete resource replacements or resets.
+    <h4>Difference between PUT and PATCH?</h4>
+    <p>PUT is used to completely replace an existing resource on the server, requiring you to send the full updated payload of data. Whereas PATCH is used for partial updates, allowing you to send only the specific fields you want to modify. <br />
+    In practice, omitting a field in a PUT request can cause that missing data to be overwritten or wiped on the server, while a PATCH request leaves all unmentioned fields untouched—making PATCH ideal for lightweight, targeted edits. <br />
+    PUT best suited for complete resource replacements or resets.</p>
 
-    Difference between fetch() and axios()?
+    <h4>Difference between fetch() and axios()?</h4>
+    <p>
     <ul>
         <li>fetch is a native browser API, while axios is an external library that requires installation.</li>
         <li>fetch requires an extra manual step for data parsing from JSON. i.e. await res.json(). While axios automatically parses JSON responses. i.e. response.data</li>
         <li>fetch does not reject on 404 or 500 errors unless checked manually via res.ok. While axios automatically rejects promises on HTTP error status codes (4xx and 5xx) and jumps to .catch()</li>
         <li>axios supports built-in request/response interceptors (ideal for attached JWT tokens), upload/download progress tracking, and request cancellation out-of-the-box.</li>
     </ul>
+    </p>
 
-    What is API Layer?
-    API Layer is a separate part of an application responsible for handling communication with backend APIs, including making requests, processing responses, and handling API-related errors, so that API logic remains separate from UI components.
+    <h4>What is API Layer?</h4>
+    <p>API Layer is a separate part of an application responsible for handling communication with backend APIs, including making requests, processing responses, and handling API-related errors, so that API logic remains separate from UI components.</p>
 
-    What are Environment variables?
-    Environment variables are configuration values stored outside the application code that allow different settings, such as API URLs, to be used for different environments without changing the source code.
+    <h4>What are Environment variables?</h4>
+    <p>Environment variables are configuration values stored outside the application code that allow different settings, such as API URLs, to be used for different environments without changing the source code.</p>
 
+    <h4>What is Authentication?</h4>
+    <p>Authentication is the process of verifying the identity of a user or a system. It determines who the user is, usually by using credentials such as username/password, OTP, biometrics, or tokens.</p>
+
+    <h4>What is Authorization?</h4>
+    <p>Authorization is the process of determining what an authenticated user, system, or service is allowed to access or perform. It defines the permissions and access levels of a user, system or a service.</p>
+
+    <h4>What are Authentication APIs?</h4>
+    <p>Authentication APIs are backend API endpoints used to handle user identity and authentication-related operations such as registration, login, logout, token generation, token refresh, and password management.</p>
+
+    <h4>What is JWT?</h4>
+    <p>JWT (JSON Web Token) is an access token generated and signed by the server after successful authentication, which the client uses to access protected resources.</p>
+
+    <h4>What is JWT format?</h4>
+    <p>A JWT basically consist of 3 parts, seperated by dots (.)<br />
+    <ul>
+        <li>1. <strong>Header:</strong> That contains the information about the JWT, such as the signing Algorithm and Token type.</li>
+        <li>2. <strong>Payload:</strong> That actually contains the claims, which are pieces of information carried by the JWT, such as user ID, role, or other relevant data.</li>
+        <li>3. <strong>Signature:</strong> The Signature is used to verify the integrity and authenticity of the JWT and to detect whether the token has been tampered with or modified.</li>
+    </ul></p>
+
+    <h4>What is Protected Request?</h4>
+    <p>A Protected Request is a combination of an API request and a JWT/Access Token that the client sends to the server to access a protected resource.</p>
+
+    <h4>What is Access Token?</h4>
+    <p>An Access Token is a credential issued by the server after successful authentication, which the client uses to access protected resources. It is commonly represented in JWT format.</p>
     
+    <h4>What is Refresh Token?</h4>
+    <p>A Refresh Token is a credential used by the client to request a new access token from the server after the current access token expires.</p>
 
+    <h4>What is an Interpector?</h4>
+    <p>An Axios Interceptor is a mechanism that allows us to inspect, modify, or handle HTTP requests and responses before they are processed by the application.</p>
+
+    <h4>What is the Differance between Request Interceptor and Response Interceptor?</h4>
+    <p>A Request Interceptor handles or modifies a request before it is sent to the server.<br />
+    A Response Interceptor handles or modifies a response after it is received from the server, including successful responses and errors.</p>
 </body>
 </html>
